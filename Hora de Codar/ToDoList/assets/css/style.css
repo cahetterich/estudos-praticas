@@ -1,0 +1,192 @@
+/**/
+/*Dimensione Browser: 1024x768*/
+
+
+
+body {
+    background-image: url(/assets/img/pexels-vijay-saiwal-4810501.jpg);
+    font-family: Helvetica; 
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+ }
+
+ button {  /* definições gerais dos botões*/
+    background-color: white;
+    color: rgb(66, 74, 117);
+    border: 2px solid rgb(66, 74, 117);
+    border-radius: 15px;
+    padding: .3rem .6rem; /* tamanho botão*/
+    font-size: 1rem;
+    cursor: pointer; /* mão no botão*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+ }
+ 
+button:hover {  /* cor do botão quando o usuário colocar o mouse em cima*/
+    background-color:rgba(27, 32, 56, 0.986) ;
+    color: white;
+}
+
+button:hover > i {  /* cor do icone quando o usuário colocar o mouse em cima*/
+    color: white;
+}
+
+button i {
+    color: rgb(66, 74, 117);
+    font-weight: bold;
+    pointer-events: none; /*desabilita o click no icone, deixando apenas a ação no botão*/
+}
+
+input, select {
+    padding: 0.35rem 0.5rem;
+}
+
+.hide {
+    display: none;
+}
+
+/* TODO HEADER */
+
+h4 {
+    /*text-align: center;*/
+    color:white;
+    padding: 7px;
+}
+
+h1 { /*TO-DO LIST*/
+    text-align: center;
+    font-size: 3rem;
+    padding: 20px;    
+}
+
+#pratica {
+    background-color: black;
+    display: flex;
+    max-width: 180px;
+    padding-left: 28px;
+    margin: 1rem;
+    border-radius: 20px; 
+    box-shadow: 4px 4px 8px 0px rgba(2, 2, 2, 0.411);       
+}
+
+#bloco1 {
+    max-width: 450px;
+    margin: 3rem auto;
+    background-color:aliceblue;
+    box-shadow: 4px 4px 8px 0px rgba(2, 2, 2, 0.411);
+    border-radius: 20px;    
+    }
+
+#todoContainer {
+    max-width: 450px;
+    margin: 3rem auto;
+    background-color: aliceblue;
+    padding: 1.5rem;
+    padding-top: 0.1rem;
+    border-radius: 20px;
+    margin-bottom: 0px;
+    }
+
+.todoContainer header {
+    text-align: center;
+    padding: 0 1rem 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+/* TODO FORM */
+
+#todoForm, #editForm {
+    padding: 1.5rem; /* ************************* ANALISAR SE FICA MELHOR APENAS 1rem como ensinado*/
+    border-bottom: 1px solid #ccc; /*BORDA DE DIVISÃO DO BLOCO */
+}
+
+#todoForm p,
+#editForm p {
+    margin-bottom: .5rem;
+    font-weight: bold;
+}
+
+.formControl {
+    display: flex;
+}
+
+.formControl input {
+    margin-right: 0.3rem; /* espaçamento entre o input (caixa de texto) e o botão */
+}
+
+#cancelEditBtn {    /* espaçamento entre o input (caixa de texto) e o botão "ANNULLA" */
+    margin-top: 1rem;
+}
+
+/* TODO TOOLBAR */
+
+#toolbar {   /*RICERCA - PARTE DA BUSCA*/
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+}
+
+#toolbar h3 { 
+    margin-bottom: .5rem;
+}
+
+#search {  /* CRIA UMA BORDA NA LATERAL DO NOSSO BLOCO, AO LADO DE "RICERCA"*/
+    border-right: 1px solid #ddd;
+    padding-right: 0.8rem;
+    margin-right: 1rem;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}    
+
+#search form { /* PARA DEIXAR O BOTÃO DO RICERCA AO LADO DA CAIXA DE TEXTO - SEM ELE FICARÁ ABAIXO */
+    display: flex;
+}
+
+#search input {   /* PARA AFASTAR O BOTÃO DE APAGAR DA CAIXA DE TEXTO DE "RICERCA" */
+    width: 100%;
+    margin-right: .3rem;
+}
+
+#filter {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+#filter select { 
+    flex: 1; 
+}
+
+/* TODO LIST */
+
+.todo {  /* ITEM INDIVIDUAL DE CADA TEXTO QUE O USUÁRIO INSERIR */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;  /* SERVE PARA DEIXAR OS ICONES ALINHADOS */
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    transition: .3s; /* QUANDO COMPLETARMOS A TAREFA, VAI ATIVAR ESSA TRANSIÇÃO*/
+}
+
+.todo h3 {
+    flex: 1;
+    font-size: 0.9rem;
+}
+
+.todo button {
+    margin-left: 0.4rem; /* DA UM AFASTAMENTO NOS BOTÕES DAS TAREFAS*/
+}
+
+.done {
+    background-color: rgb(66, 74, 117);
+}
+
+.done h3 {
+    color: white;
+    text-decoration: line-through;
+    font-style: italic;
+}

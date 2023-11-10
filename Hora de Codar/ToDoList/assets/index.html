@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratica Sett 3 G3</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+   
+<body>   <!-- Dimensione Browser: 1024x768 -->
+
+    <div id="pratica">
+    <h4>Pratica Sett 3 - G3</h4>a
+    </div>
+
+
+    <div id="bloco1"> 
+    <h1>To-do List</h1>
+    </div>
+
+    <div id="todoContainer">
+
+        <form id="todoForm">
+            <h2>Aggiungete un'attività:</h2> 
+            <div class="formControl">
+                <input type="text" id="todoInput" placeholder="Che cosa farete?"> <!-- incluir os itens da lista-->
+                <button type="submit"> 
+                    <i class="fa-thin fa-plus"></i>
+                </button>
+            </div>
+        </form>
+
+        <form id="editForm" class="hide">    <!--class= hide é para esconder as coisas *-->
+            <h2>Modificare la task:</h2>
+            <div class="formControl">
+                <input type="text" id="editInput"> <!--modificar os itens da lista-->
+                <button type="submit">
+                    <i class="fa-solid fa-check-double"></i>
+                </button>
+            </div>
+            <button id ="cancelEditBtn">Annulla</button> <!-- para que o usuário cancele -->
+        </form>
+
+     <div id="toolbar">
+        <div id="search">
+            <h3>Ricerca:</h3>
+            <form> 
+                <input type="text" id="searchInput" placeholder="Cerca"> <!--para realizar busca-->
+                <button id="erase-button">
+                    <i class="fa-solid fa-delete-left"></i>
+                </button>
+            </form>
+        </div>        
+     
+
+     <div id="filter">
+        <h3>Filtrare:</h3>
+        <select id="filterSelect">  <!-- filtro de listas-->
+            <option value="all">Tutto</option>
+            <option value="done">Fatto</option>
+            <option value="todo">Tutti</option>
+        </select>
+     </div>
+    </div>
+
+    <div id="todoList">
+        <div class="todo done"> <!-- aqui começa a ser classe pois vamos trabalhar com vários itens com a mesma função -->
+            <h3>Sto facendo una cosa...</h3> <!-- nossas tarefas -->
+            <button class="finishTodo">
+                <i class="fa-solid fa-check"></i>
+            </button>
+            <button class="editTodo">
+                <i class="fa-solid fa-pen"></i>
+            </button>
+            <button class="removeTodo">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="todo"> <!-- aqui começa a ser classe pois vamos trabalhar com vários itens com a mesma função -->
+            <h3>Sto facendo una cosa...</h3> <!-- nossas tarefas -->
+            <button class="finishTodo">
+                <i class="fa-solid fa-check"></i>
+            </button>
+            <button class="editTodo">
+                <i class="fa-solid fa-pen"></i>
+            </button>
+            <button class="removeTodo">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+    </div>
+</div>
+ <!-- JS -->  
+ <script src="/assets/js/script.js"></script>   
+</body>
+</html>
