@@ -90,38 +90,48 @@ if (idade < 13) {
 // Condição switch
 const fruta = "Maçã";
 
-switch (fruta) {
+switch (fruta) {  // colocamos no switch aquilo que estamos avaliando 
   case "Banana":
-    console.log("Eu gosto de bananas!");
-    break;
+    console.log("A const fruta é Banana!");
+    break; // devemos colocar o break em cada case, pois assim quando o elemento é encontrado a função retorna o valor correto
   case "Maçã":
-    console.log("As maçãs são ok.");
+    console.log("A const fruta é Maçã!");
     break;
   default:
     console.log("Nenhuma fruta selecionada");
 }
 
-// 2.7 Estruturas de loop
+// 2.7 Estruturas de loop - repetição 
+
 // Loop for
+
+//contador, condição de limite + incremento ("i = i + 1" que é = a "i++"")
 for (let i = 0; i < 5; i++) {
-  console.log(i); // 0, 1, 2, 3, 4
+  console.log(i);    // 0, 1, 2, 3, 4
+}
+
+for (let i = 0; i < 5; i++) {
+  // sinal de concatenação +
+  console.log("O valor de i é: " + i);    // 0, 1, 2, 3, 4
 }
 
 // Loop while
-let i = 0;
+
+let i = 0;  // devemos criar a variavel de incremento "i" fora de While
 while (i < 5) {
   console.log(i); // 0, 1, 2, 3, 4
-  i++;
+  i++;  // já o incremento fica no final do loop
 }
 
 // Loop do while
-let j = 0;
-do {
-  console.log(j); // 0, 1, 2, 3, 4
-  j++;
-} while (j < 5);
 
-// 2.8 Funções
+let j = 0;   // também devemos criar a variavel de incremento "i" fora de While
+do {   // faça 
+  console.log(j); // 0, 1, 2, 3, 4
+  j++;  // incremento 
+} while (j < 5); // while com () que dentro tem a condição de fim 
+
+// 2.8 Funções *************************************
 
 function cumprimentar(nome) {
   console.log(`Olá, ${nome}!`);
