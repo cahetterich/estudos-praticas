@@ -26,20 +26,34 @@
 
   </main>
 
+  <ul>
+    <li><b>display_flex</b> : identificar que a tag vai ser o container de flaxbox </li>
+    <li><b>flex-direction</b> : identificar qual vai ser o eixo principal e perpendicular</li>
+    <li><b>justify-content</b> : alinhar os elementos no eixo principal</li>
+    <li><b>align-items</b>: alinhar os elementos no eixo perpendicular</li>
+    <li><b>flex-wrap</b>: ----- </li>
+  </ul>
+  
+
   <h3>PADRÃO - ELEMENTO AO CANTO ESQUERDO SUPERIOR EM FORMA VERTICAL</h3>
+  <h4>Sem Flexbox</h4>
   <main class="container-0">
     <div class="bloco-01">1</div>
     <div class="bloco-02">2</div>
     <div class="bloco-03">3</div>
   </main>
 
+
+  <!--    DISPLAY FLEX     -->
   <h3>DISPLAY FLEX - ELEMENTO AO CANTO ESQUERDO SUPERIOR EM FORMA HORIZONTAL</h3>
+  <h4> "display: flex;"</h4>
   <main class="container-1">
     <div class="bloco-01">1</div>
     <div class="bloco-02">2</div>
     <div class="bloco-03">3</div>
   </main>
 
+  <!--    FLEX-DIRECTION     -->
   <h3>FLEX-DIRECTION - ESCOLHEMOS SE NOSSO EIXO PRINCIPAL SERÁ VERTICAL OU HORIZONTAL</h3>
   <h4>"Flex-direction: row;" - por padrão é no eixo row (linha) </h4>
   <main class="container-2">
@@ -74,6 +88,7 @@
     <div class="bloco-03">3</div>
   </main>
 
+   <!--    JUSTIFY-CONTENT     -->
   <h3>JUSTIFY-CONTENT</h3>
   <p>"Exemplos abaixo utilizam "flex-direction: row;"</p>
   <h3>FLEX-START</h3>
@@ -108,13 +123,59 @@
     <div class="bloco-03">3</div>
   </main>
 
-  <h3>SPACE-BETWEEN</h3>
-  <h4> "justify-content: space-between;" - </h4>
+  <h3>SPACE-AROUND</h3>
+  <h4> "justify-content: space-around;" -  parece com o between, mas não é, pois também coloca um espaço fora dos elementos (lembra uma margem) </h4>
     <main class="container-10">
     <div class="bloco-01">1</div>
     <div class="bloco-02">2</div>
     <div class="bloco-03">3</div>
   </main>
+
+  <!--    ALIGN-ITEMS     -->
+  <h3>ALIGN-ITEMS</h3> 
+  <p>"Exemplos abaixo utilizam "flex-direction: row;" e "justify-content: center;" </p>
+  <h3>FLEX-START</h3>
+  <h4> "align-items: flex-start;" - deixa nossos elementos acima do nosso conteiner </h4>
+    <main class="container-11">
+    <div class="bloco-01">1</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-03">3</div>
+  </main>
+
+  <h3>FLEX-END</h3>
+  <h4> "align-items: flex-end;" - deixa os elementos ao final do nosso eixo (conteiner)  </h4>
+    <main class="container-12">
+    <div class="bloco-01">1</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-03">3</div>
+  </main>
+
+  <h3>CENTER</h3>
+  <h4> "align-items: center;" - deixa os elementos todos centralizados no meio do container  </h4>
+    <main class="container-13">
+    <div class="bloco-01">1</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-03">3</div>
+  </main>
+
+  <h3>STRETCH</h3>
+  <h4> "align-items: stretch;" -  </h4>
+    <main class="container-14">
+    <div class="bloco-01">1</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-03">3</div>
+  </main>
+
+  <h3>BASELINE</h3>
+  <h4> "align-items: baseline;" - utilizado quando temos texto, e precisamos usar uma tag. Serve para alinhar todos os elementos com base no conteudo dentro da tag (no nosso caso 1, 2 e 3) </h4>
+    <main class="container-15">
+    <div class="bloco-01">1</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-03">3</div>
+  </main>
+
+
+  <!--    FLEX-WRAP    -->
 
 </body>
 </html>

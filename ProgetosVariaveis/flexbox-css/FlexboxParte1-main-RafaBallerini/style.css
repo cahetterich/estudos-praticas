@@ -12,16 +12,16 @@ h3{
   text-shadow: 2px 2px 9px rgba(90,224,65,0.13), 2px 2px 9px rgba(90,224,65,0.13), 2px 2px 9px rgba(90,224,65,0.13), 2px 2px 9px rgba(90,224,65,0.13), 2px 2px 9px rgba(90,224,65,0.13), 2px 2px 9px rgba(90,224,65,0.13), 2px 3px 20px rgba(90,168,39,0.97);
 }
 
-p {
+p, ul {
   border: 1px solid black;
   margin: 5px;
   background-color: #f9eac3;
 }
 
 .container {
-  display: flex;
-  flex-direction: row; /**/
-  justify-content: center;
+  display: flex;  /*identificamos que é um container de flexbox*/
+  flex-direction: row; /*já é um padrão do flex, mas colocamos para deixar mais claro nosso código*/
+  justify-content: center; /*para alinhar nossos elementos no eixo principal (row - horizontal) de forma centralizada*/
   align-items: center;
   flex-wrap: wrap;
   align-content: center;
@@ -31,7 +31,7 @@ p {
   /* indiferente: */
   background-color: #f9eac3;
   padding: 16px;
-  height: 500px;
+  height: 500px; /*espaço criado para incluir todos os elementos*/
 }
 
 .bloco-1 {
@@ -171,32 +171,94 @@ p {
      justify-content: flex-end;
    }
 
-   .container-8 {   /* CENTER */
+    .container-8 {   /* CENTER */
+      /* exemplo utilizando flex-direction: row; */
+    /* faz com que todos os elementos de dentro de um container fiquem centralizados no sentido horizontal */
+    background-color: #ed94f0c5;
+    padding: 16px;
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+  }
+
+  .container-9 {   /* SPACE-BETWEEN */
     /* exemplo utilizando flex-direction: row; */
-   /* faz com que todos os elementos de dentro de um container fiquem centralizados no sentido horizontal */
-   background-color: #ed94f0c5;
-   padding: 16px;
-   display: flex;
-   flex-direction: row; 
-   justify-content: center;
- }
+  /* distribui todos os elementos de dentro de um container ao longo do eixo princiopal no sentido horizontal */
+  background-color: #ed94f0c5;
+  padding: 16px;
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between;
+  }
 
- .container-9 {   /* SPACE-BETWEEN */
-  /* exemplo utilizando flex-direction: row; */
- /* distribui todos os elementos de dentro de um container ao longo do eixo princiopal no sentido horizontal */
- background-color: #ed94f0c5;
- padding: 16px;
- display: flex;
- flex-direction: row; 
- justify-content: space-between;
-}
+  .container-10 {   /* SPACE-AROUND */
+    /* exemplo utilizando flex-direction: row; */
+  /* parece com o between, mas não é, pois também coloca um espaço fora dos elementos (lembra uma margem)*/
+  background-color: #ed94f0c5;
+  padding: 16px;
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-around;
+  }
 
-.container-10 {   /* SPACE-BETWEEN */
-  /* exemplo utilizando flex-direction: row; */
- /* distribui todos os elementos de dentro de um container ao longo do eixo princiopal no sentido horizontal */
- background-color: #ed94f0c5;
- padding: 16px;
- display: flex;
- flex-direction: row; 
- justify-content: space-between;
-}
+   /* ALIGN-ITEMS ------------------------ */
+
+   .container-11 {   /* FLEX-START */
+    /* exemplo utilizando flex-direction: row; e justify-content: center;*/
+  /* deixa nossos elementos acima do nosso conteiner */
+  background-color: #bbd4b5c5;
+  padding: 16px;
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  align-items: flex-start;
+  height: 100px; 
+  }
+
+  .container-12 {   /* FLEX-END */
+    /* exemplo utilizando flex-direction: row; e justify-content: center;*/
+  /* deixa os elementos ao final do nosso eixo  */
+  background-color: #bbd4b5c5;
+  padding: 16px;
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  align-items: flex-end;
+  height: 100px; 
+  }
+
+  .container-13 {   /* CENTER */
+    /* exemplo utilizando flex-direction: row; e justify-content: center;*/
+  /* deixa os elementos todos centralizados no meio do container  */
+  background-color: #bbd4b5c5;
+  padding: 16px;
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  align-items: center;
+  height: 100px; 
+  }
+
+  .container-14 {   /* STRETCH */
+    /* exemplo utilizando flex-direction: row; e justify-content: center;*/
+  /* faz os elementos ocuparem todo o espaço no eixo possível (só não pode ter uma altura já pré definida) */
+  background-color: #bbd4b5c5;
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  align-items: stretch;
+  }
+
+  .container-15 {   /* BASELINE */
+    /* exemplo utilizando flex-direction: row; e justify-content: center;*/
+  /* utilizado quando temos texto, e precisamos usar uma tag. Serve para alinhar todos os elementos com base no conteudo dentro da tag (no nosso caso 1, 2 e 3) */
+  background-color: #bbd4b5c5;
+  padding: 16px;
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  align-items: baseline;
+   }
+
+  
+    /* FLEX-WRAP  ------------------------ */
