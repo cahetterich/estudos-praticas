@@ -4,7 +4,7 @@
 
 .container {
   display: flex;
-  flex-direction: row;
+  flex-direction: row; /**/
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -95,28 +95,52 @@
   display: flex;  /*MUDA PARA HORIZONTAL*/
   }
 
-  /* FLEX-DIRECTION - ESCOLHEMOS SE NOSSO EIXO PRINCIPAL SERÁ VERTICAL OU HORIZONTAL*/
-
-  .container-2 {    /* FLEX-DIRECTION - ROW */
-    /*por padrão acontece que é no eixo row (linha) */
-    background-color: #ebb684;
-    padding: 16px;
-    display: flex;
-    flex-direction: row;
+    /* FLEX-DIRECTION - ESCOLHEMOS SE NOSSO EIXO PRINCIPAL SERÁ VERTICAL OU HORIZONTAL*/
+  
+    .container-2 {
+      /* FLEX-DIRECTION - ROW */
+      /*por padrão acontece que é no eixo row (linha) */
+      background-color: #ebb684;
+      padding: 16px;
+      display: flex;
+      flex-direction: row;
     }
-
-    .container-3 {    /* FLEX-DIRECTION - ROW-REVERSE */
+  
+    .container-3 {
+      /* FLEX-DIRECTION - ROW-REVERSE */
       /* a linha será reversa (ao contrário) */
       background-color: #ebb684;
       padding: 16px;
       display: flex;
       flex-direction: row-reverse;
-      }
+    }
+  
+    .container-4 {
+      /* FLEX-DIRECTION - COLUMN */
+      /* também conseguimos deixar como eixo principal o eixo vertical */
+      background-color: #ebb684;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .container-5 {
+      /* FLEX-DIRECTION - COLUMN-REVERSE */
+      /* também conseguimos deixar como eixo principal o eixo vertical e apenas mudar o sentido dele*/
+      background-color: #ebb684;
+      padding: 16px;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  
+    /* JUSTIFY-CONTENT ------------------------ */
 
-      .container-4 {    /* FLEX-DIRECTION - COLUMN */
-        /* também conseguimos deixar como eixo principal o eixo vertical */
-        background-color: #ebb684;
-        padding: 16px;
-        display: flex;
-        flex-direction: column;
-        }
+    .container-6 {
+       /* exemplo utilizando flex-direction: row; */
+      /* também conseguimos deixar como eixo principal o eixo vertical e apenas mudar o sentido dele*/
+      background-color: #ed94f0c5;
+      padding: 16px;
+      display: flex;
+      flex-direction: row; 
+      justify-content: flex-start;
+    }
