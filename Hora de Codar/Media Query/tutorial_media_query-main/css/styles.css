@@ -14,35 +14,42 @@ h1 {
 
 /* 3 - Outros modos */
 /* all, print, screen, speech */
-@media print and (max-width: 600px) {
+/*screen = diferentes telas (mobile, desktop..)*/
+/*print = quando o usuário imprimir nossa página*/
+/*speech = leitores de tela, reconhecimento do que está na tela por voz */
+
+@media print and (max-width: 600px) { /* regra para impressões / lembrando que o Layout da impressão deve estar como "Portrait", se estiver em Landscape não aparecerá nenhuma modificação*/
   h1 {
     color: green;
   }
 }
 
 /* 4 - Todos os modos */
-@media (max-width: 700px) {
+@media (max-width: 700px) { /* o ALL é o padrão do media query, por isso não recisamos definir como as outras opções mostradas acima */
   h2 {
     color: purple;
   }
 }
 
 /* 5 - Mobile first */
-@media (min-width: 200px) {
+/* desenvolvemos das tela menores para as maiores = MIN-WIDTH > MAX-WIDTH*/
+@media (min-width: 200px) {  /* MIN-WIDTH = TELAS MAIORES QUE 200px */
   h2 {
     color: teal;
   }
 }
 
 /* 6 - AND na media query */
-@media (min-width: 300px) and (max-width: 400px) {
+/* CONDICIONAIS - INTERVALO DE RESOLUÇÕES */
+@media (min-width: 300px) and (max-width: 400px) { /* MENOR < PARA O > MAIOR */
   h3 {
     font-size: 3em;
   }
 }
 
 /* 7 - Orientation */
-@media (orientation: landscape) {
+/* orientação da nossa tela */
+@media (orientation: landscape) {  /* HORIZONTAL = LANDSCAPE*/
   h3 {
     color: brown;
   }
