@@ -50,3 +50,73 @@
   font-family: 'Courier New', Courier, monospace;
   border-radius: 16px;
 }
+
+/* << ESTUDOS >>*/
+
+.container-0 {   /* PADRÃO - ELEMENTO AO CANTO ESQUERDO SUPERIOR EM FORMA VERTICAL*/
+
+ /* meus estudos : */
+ background-color: #c3ecf9;
+ padding: 16px;
+ 
+
+}
+
+.bloco-01 { 
+  background-color: #96b8e6;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  font-size: 40px;
+  border-radius: 50%;
+}
+
+.bloco-02 {
+  background-color: #d8bfd8;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  font-size: 40px;
+  border-radius: 50%;
+}
+
+.bloco-03 { 
+  background-color: #ff9999;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  font-size: 40px;
+  border-radius: 50%;
+}
+
+.container-1 {   /* DISPLAY FLEX - ELEMENTO AO CANTO ESQUERDO SUPERIOR EM FORMA HORIZONTAL*/
+  background-color: #dbe27b;
+  padding: 16px;
+  display: flex;  /*MUDA PARA HORIZONTAL*/
+  }
+
+  /* FLEX-DIRECTION - ESCOLHEMOS SE NOSSO EIXO PRINCIPAL SERÁ VERTICAL OU HORIZONTAL*/
+
+  .container-2 {    /* FLEX-DIRECTION - ROW */
+    /*por padrão acontece que é no eixo row (linha) */
+    background-color: #ebb684;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    }
+
+    .container-3 {    /* FLEX-DIRECTION - ROW-REVERSE */
+      /* a linha será reversa (ao contrário) */
+      background-color: #ebb684;
+      padding: 16px;
+      display: flex;
+      flex-direction: row-reverse;
+      }
+
+      .container-4 {    /* FLEX-DIRECTION - COLUMN */
+        /* também conseguimos deixar como eixo principal o eixo vertical */
+        background-color: #ebb684;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        }
