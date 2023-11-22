@@ -1,5 +1,21 @@
 * {
   margin: 0;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+h2, h3 {
+  font-size: medium;
+  margin: 5px;
+}
+
+h3{
+  text-shadow: 2px 2px 9px rgba(90,224,65,0.13), 2px 2px 9px rgba(90,224,65,0.13), 2px 2px 9px rgba(90,224,65,0.13), 2px 2px 9px rgba(90,224,65,0.13), 2px 2px 9px rgba(90,224,65,0.13), 2px 2px 9px rgba(90,224,65,0.13), 2px 3px 20px rgba(90,168,39,0.97);
+}
+
+p {
+  border: 1px solid black;
+  margin: 5px;
+  background-color: #f9eac3;
 }
 
 .container {
@@ -63,7 +79,7 @@
 }
 
 .bloco-01 { 
-  background-color: #96b8e6;
+  background-color: #eb2121;
   height: 50px;
   width: 50px;
   text-align: center;
@@ -72,7 +88,7 @@
 }
 
 .bloco-02 {
-  background-color: #d8bfd8;
+  background-color: #ddf034;
   height: 50px;
   width: 50px;
   text-align: center;
@@ -81,7 +97,7 @@
 }
 
 .bloco-03 { 
-  background-color: #ff9999;
+  background-color: #15f00e;
   height: 50px;
   width: 50px;
   text-align: center;
@@ -135,12 +151,52 @@
   
     /* JUSTIFY-CONTENT ------------------------ */
 
-    .container-6 {
+    .container-6 {  /* FLEX-START */
        /* exemplo utilizando flex-direction: row; */
-      /* também conseguimos deixar como eixo principal o eixo vertical e apenas mudar o sentido dele*/
+      /* faz com que todos os elementos de dentro de um container vão para o inicio do nosso eixo horizontal */
       background-color: #ed94f0c5;
       padding: 16px;
       display: flex;
       flex-direction: row; 
       justify-content: flex-start;
     }
+
+    .container-7 {   /* FLEX-END */
+      /* exemplo utilizando flex-direction: row; */
+     /* faz com que todos os elementos de dentro de um container vão para final do eixo no sentido horizontal */
+     background-color: #ed94f0c5;
+     padding: 16px;
+     display: flex;
+     flex-direction: row; 
+     justify-content: flex-end;
+   }
+
+   .container-8 {   /* CENTER */
+    /* exemplo utilizando flex-direction: row; */
+   /* faz com que todos os elementos de dentro de um container fiquem centralizados no sentido horizontal */
+   background-color: #ed94f0c5;
+   padding: 16px;
+   display: flex;
+   flex-direction: row; 
+   justify-content: center;
+ }
+
+ .container-9 {   /* SPACE-BETWEEN */
+  /* exemplo utilizando flex-direction: row; */
+ /* distribui todos os elementos de dentro de um container ao longo do eixo princiopal no sentido horizontal */
+ background-color: #ed94f0c5;
+ padding: 16px;
+ display: flex;
+ flex-direction: row; 
+ justify-content: space-between;
+}
+
+.container-10 {   /* SPACE-BETWEEN */
+  /* exemplo utilizando flex-direction: row; */
+ /* distribui todos os elementos de dentro de um container ao longo do eixo princiopal no sentido horizontal */
+ background-color: #ed94f0c5;
+ padding: 16px;
+ display: flex;
+ flex-direction: row; 
+ justify-content: space-between;
+}
