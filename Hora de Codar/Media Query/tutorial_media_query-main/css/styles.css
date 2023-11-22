@@ -1,4 +1,4 @@
-/* adaptação do site para responsivo */
+/* adaptação do site para responsivo - GERALMENTE AS MQ SÃO AS ULTIMAS REGRAS NO CSS*/
 
 h1 {
   color: red;
@@ -56,6 +56,7 @@ h1 {
 }
 
 /* 8 - OR na media query */
+/* OU , */
 @media (max-width: 200px), (orientation: landscape) {
   h3 {
     font-size: 4em;
@@ -70,17 +71,19 @@ h1 {
   }
 }
 
-h4 {
-  color: blue;
-}
+/*h4 {            /*  LEMBRANDO QUE DEVEMOS RESPEITAR A ORDEM DOS COMENDOS PARA NÃO SOBREESCREVER
+  color: blue;   /*   NESTE CASO O AZUL APARECERÁ EM TODO H4, SOBREESCREVENDO NOSSO COMENDO ACIMA (RED)
+}*/             /*   PARA QUE DÊ CERTO, O H4 COLOR BLUE, DEVE SER COLOCADO ACIMA DO NOSSO MEDIA H4 COLOR RED 
+
 
 /* 10 - breakpoints */
+/* são resoluções que cosutumamos trabalhar */
 h5 {
   font-size: 3em;
 }
 
 /* 320px - 480px = mobile */
-/* Em mobile first não precisa de MQ */
+/* Em mobile first não precisa de MQ  -  regra global*/
 h5 {
   color: aqua;
 }
@@ -107,7 +110,7 @@ h5 {
 }
 
 /* 1200 e + = telas maiores, tvs */
-@media (min-width: 1200px) {
+@media (min-width: 1200px) {  /* AQUI O PADRÃO PARA TELAS MUITO MUITO MAIORES É INCLUIR UM BACKGROUND DE COR UNICA, E CENTRALIZAR TODO O SITE*/
   h5 {
     color: darkorchid;
   }
