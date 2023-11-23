@@ -31,7 +31,11 @@
     <li><b>flex-direction</b> : identificar qual vai ser o eixo principal e perpendicular</li>
     <li><b>justify-content</b> : alinhar os elementos no eixo principal</li>
     <li><b>align-items</b>: alinhar os elementos no eixo perpendicular</li>
-    <li><b>flex-wrap</b>: ----- </li>
+    <li><b>flex-wrap</b>: define se os itens flexíveis são forçados em uma linha ou podem ser agrupados em várias linhas</li>
+    <li><b>align-content</b>: define a distribuição do espaço entre e ao redor dos itens de conteúdo </li>
+    <li><b>gap</b>: define o tamanho do espaço entre as linhas e entre as colunas no flexbox, grade ou layout de múltiplas colunas </li>
+    <li><b>arow-gap</b>: define o tamanho do intervalo (medianiz) entre as linhas de um elemento </li>
+    <li><b>column-gap</b>: especifica o espaço entre as colunas na grade, flexbox ou layout de várias colunas</li>
   </ul>
   
 
@@ -109,8 +113,8 @@
 
   <h3>CENTER</h3>
   <h4> "justify-content: center;" - faz com que todos os elementos de dentro de um container fiquem centralizados no sentido horizontal </h4>
-    <main class="container-8">
-    <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <main class="container-8">
     <div class="bloco-02">2</div>
     <div class="bloco-03">3</div>
   </main>
@@ -176,6 +180,407 @@
 
 
   <!--    FLEX-WRAP    -->
+
+  <h3>FLEX-WRAP</h3> 
+  <p>"Exemplos abaixo utilizam "flex-direction: row;" , "justify-content: center;" e "align-content: center;" </p>
+  <h3>NOWRAP</h3>
+  <h4> "flex-wrap: nowrap;" - tenta manter todos os elementos em uma linha só, mesmo alterando a dimensão da página </h4>
+    <main class="container-16">
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+  </main>
+
+  <h3>WRAP</h3>
+  <h4> "flex-wrap: wrap;" -  desce os elementos para que não fiquem todos em uma linha só, dessa forma não altera nenhum elemento para que caiba no nosso site </h4>
+    <main class="container-17">
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+  </main>
+
+  <h3>WRAP-REVERSE</h3>
+  <h4> "flex-wrap: wrap-reverse;" - ao inves o elemento quando chega no final da linha ir para baixo, ele vai para cima </h4>
+    <main class="container-18">
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+  </main>
+
+  <!--    FLEX-FLOW    -->
+<p><i>OBSERVAÇÃO:</i> a propriedade <b>FLEX-WRAP</b> pode ser declarada junto com <b>FLEX-DIRECTION</b>, da seguinte forma > </p>
+<h3> "FLEX-FLOW</h3>
+<h4> "flex-flow: row wrap"; - dessa forma declaramos uma única vez duas propriedades (simplifica a leitura) </h4>
+    <main class="container-19">
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+  </main>
+
+<!--    ALIGN-CONTENT     -->
+
+<h3>ALIGN-CONTENT</h3> 
+<p>"Exemplos abaixo utilizam "flex-direction: row;" , "justify-content: center;" , "align-content: center;" e "flex-wrap: wrap;"</p>
+<p>alinha os elementos em mais de uma linha sempre que utilizamos o <b>WRAP</b></p>
+<h3>FLEX-START</h3>
+<h4> "align-content: flex-start;" </h4>
+<h4> alinha todos os elementos acima do nosso container </h4>
+  <main class="container-20">
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+</main>
+
+<h3>FLEX-END</h3>
+<h4> "align-content: flex-end;"</h4>
+<h4> alinha todos os elementos abaixo do nosso container </h4>
+  <main class="container-21">
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+</main>
+
+<h3>CENTER</h3>
+<h4> "align-content: center;"</h4>
+<h4> alinha todos os elementos abaixo do nosso container </h4>
+  <main class="container-22">
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+</main>
+
+<h3>SPACE-BETWEEN</h3>
+<h4> "align-content: space-between;" </h4>
+<h4> coloca um espaço entre nossos elementos - se for perpenticular será nas linhas, e o primeiro elemento ficará acima e o último abaixo</h4>
+  <main class="container-23">
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+</main>
+
+<h3>SPACE-AROUND</h3>
+<h4> "align-content: space-around;" </h4>
+<h4> dá uma espaço como se fosse uma margin aos elementos (no nosso exemplo são as linhas) </h4>
+  <main class="container-24">
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+</main>
+
+<!--    GAP     -->
+
+<h3>GAP - ROW-GAP - COLUMN-GAP</h3> 
+<p>"Exemplos abaixo utilizam "flex-direction: row;" , "justify-content: center;" , "align-content: center;" e "flex-wrap: wrap;" </p>
+<p>alinha os elementos em mais de uma linha sempre que utilizamos o <b>WRAP</b></p>
+<h3>GAP</h3>
+<h4> "gap: 20px;" - coloca um espaçamento entre os elementos no eixo vertical e horizontal </h4>
+<h4> inclui um espaço entre nossos elementos dentro do container </h4>
+  <main class="container-25">
+    <div class="bloco-01">1</div>  
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>
+    <div class="bloco-01">1</div>  
+    <div class="bloco-02">2</div> 
+    <div class="bloco-02">2</div>
+    <div class="bloco-02">2</div>  
+    <div class="bloco-02">2</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div>
+    <div class="bloco-03">3</div> 
+</main>
+
+<h4> "gap: 70px;" - com 70 pixels </h4>
+<h4> </h4>
+  <main class="container-26">
+  <div class="bloco-01">1</div>  
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>  
+  <div class="bloco-02">2</div> 
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>  
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>   
+</main>
+
+<h4> "gap: 10px 30px;" - 10px de distancia entre as linhas e 30px de distancia entre as colunas/elementos</h4>
+<h4> </h4>
+  <main class="container-27">
+  <div class="bloco-01">1</div>  
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>  
+  <div class="bloco-02">2</div> 
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>  
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>   
+</main>
+
+<!--    ROW-GAP     -->
+
+
+<!--    COLUMN-GAP     -->
+
 
 </body>
 </html>

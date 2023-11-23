@@ -262,3 +262,167 @@ p, ul {
 
   
     /* FLEX-WRAP  ------------------------ */
+
+    .container-16 {   /* NOWRAP */
+      /* exemplo utilizando orientações anteriores */
+    /*  tenta manter todos os elementos em uma linha só mesmo alterando a dimensão da página */
+    background-color: #ad957ec5;
+    padding: 16px;
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+     }
+
+     .container-17 {   /* WRAP */
+      /* exemplo utilizando orientações anteriores */
+    /*  desce os elementos para que não fiquem todos em uma linha só, dessa forma não altera nenhum elemento para que caiba no nosso site*/
+    background-color: #ad957ec5;
+    padding: 16px;
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+     }
+
+     .container-18 {   /* WRAP-REVERSE */
+      /* exemplo utilizando orientações anteriores */
+      /* ao inves o elemento quando chega no final da linha ir para baixo, ele vai para cima */
+      background-color: #ad957ec5;
+      padding: 16px;
+      display: flex;
+      flex-direction: row; 
+      justify-content: center;
+      align-content: center;
+      flex-wrap: wrap-reverse;
+       }
+
+       /* FLEX-FLOW --------------------------- */
+
+       .container-19 {   /* FLEX-FLOW ( FLEX-DIRECTION + FLEX-WRAP) */
+        /* 
+        /* a propriedade FLEX-WRAP pode ser declarada junto com FLEX-DIRECTION */
+        background-color: #22447091;
+        padding: 16px;
+        display: flex;      
+        justify-content: center;
+        align-content: center;      
+        flex-flow: row wrap;
+         }
+
+   /* ALIGN-CONTENT --------------------------- */
+
+   .container-20 {   /* FLEX-START  */
+    /* 
+    /* alinha todos os elementos acima do nosso container*/
+    background-color: #22447091;
+    padding: 16px;
+    display: flex;      
+    justify-content: center;
+    align-content: center;      
+    flex-wrap: wrap;
+    align-content: flex-start;
+    height: 150px; /*espaço dentro do container*/
+     }
+
+     .container-21 {   /* FLEX-END  */
+      /* 
+      /* alinha todos os elementos no final do nosso container/abaixo*/
+      background-color: #22447091;
+      padding: 16px;
+      display: flex;      
+      justify-content: center;
+      align-content: center;      
+      flex-wrap: wrap;
+      align-content: flex-end;
+      height: 150px; /*espaço dentro do container*/
+       }
+
+       .container-22 {   /*  CENTER  */
+        /* 
+        /* alinha todos os elementos no centro do container */
+        background-color: #22447091;
+        padding: 16px;
+        display: flex;      
+        justify-content: center;
+        align-content: center;      
+        flex-wrap: wrap;
+        align-content: center;
+        height: 150px; /*espaço dentro do container*/
+         }
+
+         .container-23 {   /*  SPACE-BETWEEN  */
+          /* 
+          /* coloca um espaço entre nossos elementos - se for perpenticular será nas linhas, e o primeiro elemento ficará acima e o último abaixo */
+          background-color: #22447091;
+          padding: 16px;
+          display: flex;      
+          justify-content: center;
+          align-content: center;      
+          flex-wrap: wrap;
+          align-content: space-between;
+          height: 150px; /*espaço dentro do container*/
+           }
+
+           .container-24 {   /*  SPACE-AROUND  */
+            /* 
+            /* dá uma espaço como se fosse uma margin aos elementos (no nosso exemplo são as linhas) */
+            background-color: #22447091;
+            padding: 16px;
+            display: flex;      
+            justify-content: center;
+            align-content: center;      
+            flex-wrap: wrap;
+            align-content: space-around;
+            height: 150px; /*espaço dentro do container*/
+             }
+
+/* GAP --------------------------- */
+
+.container-25 {   /*  GAP  20px*/
+  /* 
+  /* coloca um espaçamento entre os elementos no eixo vertical e horizontal  */
+  background-color: #f394185b;
+  padding: 16px;
+  display: flex;      
+  justify-content: center;
+  align-content: center;      
+  flex-wrap: wrap;
+  align-content: space-around;
+  gap: 20px;
+  height: 200px; /*espaço dentro do container*/
+   }
+
+   .container-26 {   /*  GAP  70px */
+    /* 
+    /* coloca um espaçamento entre os elementos no eixo vertical e horizontal  */
+    background-color: #f394185b;
+    padding: 16px;
+    display: flex;      
+    justify-content: center;
+    align-content: center;      
+    flex-wrap: wrap;
+    align-content: space-around;
+    gap: 70px;
+    height: 500px; /*espaço dentro do container*/
+     }
+
+     .container-27 {   /*  GAP  10px 30px*/
+      /* 
+      /* 10px de distancia entre as linhas e 30px de distancia entre as colunas/elementos */
+      background-color: #f394185b;
+      padding: 16px;
+      display: flex;      
+      justify-content: center;
+      align-content: center;      
+      flex-wrap: wrap;
+      align-content: space-around;
+      gap: 10px 30px;
+      height: 200px; /*espaço dentro do container*/
+       }
+
+ /* ROW-GAP --------------------------- */
+
+  /* COLUMN-GAP   --------------------------- */
