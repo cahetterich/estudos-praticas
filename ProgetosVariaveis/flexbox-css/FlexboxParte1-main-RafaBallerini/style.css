@@ -425,4 +425,33 @@ p, ul {
 
  /* ROW-GAP --------------------------- */
 
+ .container-28 {   /*  ROW-GAP  10px 30px*/
+  /* 
+  /* literalmente a distancia entre as linhas */
+  background-color: #f394185b;
+  padding: 16px;
+  display: flex;      
+  justify-content: center;
+  align-content: center;      
+  flex-wrap: wrap;
+  align-content: space-around;
+  row-gap: 10px;
+  height: 200px; /*espaço dentro do container*/
+   }
+
+
   /* COLUMN-GAP   --------------------------- */
+
+  .container-29 {   /*  COLUMN-GAP  30px*/
+    /* 
+    /* literalmente a distancia entre as colunas */
+    background-color: #f394185b;
+    padding: 16px;
+    display: flex;      
+    justify-content: center;
+    align-content: center;      
+    flex-wrap: wrap;
+    align-content: space-around;
+    column-gap: 30px;
+    height: 200px; /*espaço dentro do container*/
+     }

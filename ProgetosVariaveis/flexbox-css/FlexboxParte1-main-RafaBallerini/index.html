@@ -27,18 +27,16 @@
   </main>
 
   <ul>
-    <li><b>display_flex</b> : identificar que a tag vai ser o container de flaxbox </li>
-    <li><b>flex-direction</b> : identificar qual vai ser o eixo principal e perpendicular</li>
-    <li><b>justify-content</b> : alinhar os elementos no eixo principal</li>
-    <li><b>align-items</b>: alinhar os elementos no eixo perpendicular</li>
-    <li><b>flex-wrap</b>: define se os itens flexíveis são forçados em uma linha ou podem ser agrupados em várias linhas</li>
-    <li><b>align-content</b>: define a distribuição do espaço entre e ao redor dos itens de conteúdo </li>
-    <li><b>gap</b>: define o tamanho do espaço entre as linhas e entre as colunas no flexbox, grade ou layout de múltiplas colunas </li>
-    <li><b>arow-gap</b>: define o tamanho do intervalo (medianiz) entre as linhas de um elemento </li>
-    <li><b>column-gap</b>: especifica o espaço entre as colunas na grade, flexbox ou layout de várias colunas</li>
+    <li><b>display_flex</b> : identificar que a tag vai ser o container de flaxbox.</li>
+    <li><b>flex-direction</b> : identificar qual vai ser o eixo principal e perpendicular.</li>
+    <li><b>justify-content</b> : alinhar os elementos no eixo principal.</li>
+    <li><b>align-items</b>: alinhar os elementos no eixo perpendicular.</li>
+    <li><b>flex-wrap</b>: decidir se os elementos irão para a linha de baixo quando chegarem no final ou se ficarão espremidos.</li>
+    <li><b>flex-flow</b>: identificar o flex-direction e o flex-wrap de uma vez só.</li>
+    <li><b>align-content</b>: para quando existe o flex-wrap e queremos alinhar as linhas no nosso eixo perpendicular.</li>
+    <li><b>gap / arow-gap / column-gap </b>: para fixar algum tamanho no espaço entre os elementos. Seja lado a lado ou entre eles em cada linha.</li>
   </ul>
   
-
   <h3>PADRÃO - ELEMENTO AO CANTO ESQUERDO SUPERIOR EM FORMA VERTICAL</h3>
   <h4>Sem Flexbox</h4>
   <main class="container-0">
@@ -578,9 +576,61 @@
 
 <!--    ROW-GAP     -->
 
+<h3>ROW-GAP</h3>
+<h4> "row-gap: 10px" - literalmente a distancia entre as linhas </h4>
+<h4>define de forma mais clara no nosso código </h4>
+  <main class="container-28">
+  <div class="bloco-01">1</div>  
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>  
+  <div class="bloco-01">1</div>  
+  <div class="bloco-02">2</div> 
+  <div class="bloco-02">2</div> 
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>  
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>  
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>   
+</main>
+
 
 <!--    COLUMN-GAP     -->
 
+<h3>COLUM-GAP</h3>
+<h4> "column-gap: 30px" - literalmente a distancia entre as colunas </h4>
+<h4>define de forma mais clara no nosso código </h4>
+  <main class="container-29">
+  <div class="bloco-01">1</div>  
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>
+  <div class="bloco-01">1</div>  
+  <div class="bloco-02">2</div> 
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>  
+  <div class="bloco-02">2</div>
+  <div class="bloco-02">2</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>
+  <div class="bloco-03">3</div>   
+</main>
+
+<p> OU SEJA : colocar "gap: 10px 30px" é igual que "row-gap: 10px;" + "column-gap: 30px;" no código</p>
 
 </body>
 </html>
