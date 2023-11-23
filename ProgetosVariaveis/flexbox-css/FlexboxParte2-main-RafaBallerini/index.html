@@ -8,9 +8,9 @@
   <link href="style.css" rel="stylesheet">
 </head>
 <body>
-  
-  <main class="container">
 
+  <h2>Exemplo Rafaella Ballerini: </h2>
+  <main class="container">
     <div class="bloco-1">1</div>
     <div class="bloco-2">2</div>
     <div class="bloco-3">3</div>
@@ -23,8 +23,66 @@
     <div class="bloco-1">10</div>
     <div class="bloco-2">11</div>
     <div class="bloco-3">12</div> -->
+  </main> 
 
+<h2>Estilizando os filhos(blocos) do nosso container: </h2>
+
+<h3>PROPRIEDADES:</h3>
+<ul>
+  <li><b>Order</b> : mudamos a ordem dos nossos elementos *o padrão de todo elemento é ter "order: 0;"</li>
+  <li><b>Order</b> :</li>
+  <li><b>Order</b> :</li>
+  <li><b>Order</b> :</li>
+  <li><b>Order</b> :</li>
+</ul>
+
+<!--           ORDER             -->
+
+<h3>ORDER:</h3>
+<p></p>
+<h2>quando o order estiver zero, a ordem dos nossos elementos respeitará o HTML</h2>
+<h4> "order: 0;"</h4>
+  <main class="container-1">
+    <div class="bloco-01">1</div>
+    <div class="bloco-02">2</div>
+    <div class="bloco-03">3</div>
   </main>
+  
+<h2>já quando estiver 1 no nosso bloco 2, a ordem dos nossos elementos se altera - o 1 deixa o elemento no final dos nossos blocos</h2>
+<h4> "order: 1;"</h4>
+  <main class="container-1">
+    <div class="bloco-001">1</div>
+    <div class="bloco-002">2</div>
+    <div class="bloco-003">3</div>
+  </main>
+
+  <h2>também podemos usar números negativos - isso levará nosso bloco 3 para a primeira posição dos blocos/elementos</h2>
+  <h4> "order: -1;"</h4>
+    <main class="container-1">
+      <div class="bloco-0001">1</div>
+      <div class="bloco-0002">2</div>
+      <div class="bloco-0003">3</div>
+    </main>
+
+    <h4>Exemplos com vários blocos: </h4>
+    <h4> Todos os elementos vermelhos que estão com -1 ficarão na frente, após os azuis que estão com 1 e por ultimo os roxos com 0</h4>
+    <main class="container-1">
+      <div class="bloco-01">1</div>
+      <div class="bloco-002">2</div>
+      <div class="bloco-0003">3</div>
+      <div class="bloco-01">4</div>
+      <div class="bloco-002">5</div>
+      <div class="bloco-0003">6</div>
+      <div class="bloco-01">7</div>
+      <div class="bloco-002">8</div>
+      <div class="bloco-0003">9</div>
+      <div class="bloco-01">10</div>
+      <div class="bloco-002">11</div>
+      <div class="bloco-0003">12</div>
+    </main>
+
+<!-- 12:14  -->
+
 
 </body>
 </html>
