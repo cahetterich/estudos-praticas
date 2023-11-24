@@ -30,10 +30,10 @@
 <h3>PROPRIEDADES:</h3>
 <ul>
   <li><b>Order</b> : mudamos a ordem dos nossos elementos *o padrão de todo elemento é ter "order: 0;"</li>
-  <li><b>Order</b> :</li>
-  <li><b>Order</b> :</li>
-  <li><b>Order</b> :</li>
-  <li><b>Order</b> :</li>
+  <li><b>Flex-grow</b> :</li>
+  <li><b>flex-shrink:</b> :</li>
+  <li><b>Flex-basis</b> :</li>
+  <li><b>Flex</b> :</li>
 </ul>
 
 <!--           ORDER             -->
@@ -81,8 +81,200 @@
       <div class="bloco-0003">12</div>
     </main>
 
-<!-- 12:14  -->
+    <h2>OUTRO EXEMPLO : quando incluimos duas order iguais a um mesmo bloco, eles se intercalam levando em conta como estão dispostos no HTML </h2>
+    <h4> bloco 1 = order: 1; / bloco 2 = order: 1; / bloco 3 = order: -1; </h4>
+      <main class="container-1">
+        <div class="bloco-11">1</div>
+        <div class="bloco-22">2</div>
+        <div class="bloco-33">3</div>
+        <div class="bloco-11">4</div>
+        <div class="bloco-22">5</div>
+        <div class="bloco-33">6</div>
+        <div class="bloco-11">7</div>
+        <div class="bloco-22">8</div>
+        <div class="bloco-33">9</div>
+      </main>
+<p>OBS: lembrando que se todos os nossos blocos tiverem a mesma "order" ficará como se estivesse com 0 (padrão)</p>
+
+<!--            FLEX-GROW             -->
+
+<h3>FLEX-GROW</h3>
+<h4>define o crescimento de um ou mais itens de uma classe caso seja necessário</h4>
+<h4> "flex-grow: 1;"</h4>
+<main class="container-2">
+  <div class="bloco-00001">1</div>
+  <div class="bloco-00002">2</div>
+  <div class="bloco-00003">3</div>
+  <div class="bloco-00001">4</div>
+  <div class="bloco-00002">5</div>
+  <div class="bloco-00003">6</div>
+</main>
+<p>o flex-group aumenta o tamanho por proporção e não por pixels</p>
+
+<h4>Outro Exemplo: </h4>
+<h4> se utilizamos "flex-grow: 1;" nos blocos 1 e 2 VEJA QUE AUMENTA DE FORMA PROPORCIONAL CADA BLOCO </h4>
+<main class="container-2">
+  <div class="bloco-00001">1</div>
+  <div class="bloco-000002">2</div>
+  <div class="bloco-00003">3</div>
+  <div class="bloco-00001">4</div>
+  <div class="bloco-000002">5</div>
+  <div class="bloco-00003">6</div>
+</main>
+
+<h4>E se incluirmos "flex-grow: 1;" no bloco 2, 3 e "flex-grow: 2;" no bloco 1? </h4>
+<h4>ocorre que ele não crescerá o dobro, pois aproporção do flex grow não é alargura total do elemento, mas apenas o que ele vai crescer apartir do tamanho que ele já tem  </h4>
+
+<main class="container-2">
+  <div class="bloco-000001">1</div>
+  <div class="bloco-000002">2</div>
+  <div class="bloco-000003">3</div>
+  <div class="bloco-000001">4</div>
+  <div class="bloco-000002">5</div>
+  <div class="bloco-000003">6</div>
+</main>
+<p> <b>Na prática</b>: <br> 
+  o bloco 1 tem o tamanho de 456px, <br>
+  e o bloco 2 tem o tamanho de 303px <br>
+   <b>Logo</b>: <br>
+   Bloco 1 = 456px(com flex-grow 2) - 150px(tamanho fixo que definimos no css) = 306px <br>
+   Bloco 2 = 303px(com flex-grow 1) - 150px(tamanho fixo que definimos no css) = 153px <br>
+   <b>Então</b>: <br>
+  306px é o dobro de 153px <br>
+  Ou seja, o espaço que cresceu fora o tamanho que já era original do nosso bloco,<br>
+  é o dobro proporcional ao flex-grow mas não necessáriamente terá o dobro do tamanho.
+</p>
+
+<!--           FLEX-SHRINK              -->
+
+<h3>FLEX-SHRINK</h3>
+<h4>habilidade dos nossos blocos de encolher seu tamanho para caber em nosso container</h4>
+<h4> "flex-shrink: 1;"</h4>
+<main class="container-3">
+  <div class="bloco-111">1</div>
+  <div class="bloco-222">2</div>
+  <div class="bloco-333">3</div>    
+ </main>
+
+ <p>para isso nosso container dever ter uma largura máxima (ex:200px), se não eles vão pode ficar do tamanho que quiserem sem encolher, <br>
+  e também não pode ter o "flex-wrap: nowrap"(o exemplo possui flex-wrap: wrap), pois caso o contrário eles não vão poder descer caso não caibam dentro do nosso container</p>
+
+  <h4>Outro exemplo</h4>
+  <h4> "flex-shrink: 2;" no bloco 3</h4>
+  <main class="container-3">
+    <div class="bloco-111">1</div>
+    <div class="bloco-222">2</div>
+    <div class="bloco-3333">3</div>
+    </main>
+  <P>Logo, seguindo a mesma logica do flex-grow, no flex-shrink nosso bloco diminuirá proporcionalmente.</P>
+  <p> <b>Na prática</b>: <br> 
+    o bloco 1 tem o tamanho de 122,5px <br>
+    o bloco 2 tem o tamanho de 122,5px <br>
+    e o bloco 3 tem o tamanho de 95px <br>
+     <b>Logo</b>: <br>
+     Bloco 1 = 122,5px(com flex-shrink 1) - 150px(tamanho fixo que definimos no css) = 27,5px menor <br>
+     Bloco 2 = 122,5px(com flex-shrink 1) - 150px(tamanho fixo que definimos no css) = 27,5px menor <br>
+     Bloco 3 = 95px(com flex-shrink 2) - 150px(tamanho fixo que definimos no css) = 55px menor<br>
+
+     <p><b>OBS</b>: não usamos numeros negativos quando utilizamos flex-grow e flex-shrink. </p>
+
+<!--           FLEX-BASIS              -->
+
+<h3>FLEX-BASIS</h3>
+<h4>define o tamanho dos nossos blocos, tanto em largura quando altura </h4>
+<h4> "flex-basis: auto;"</h4>
+<main class="container-4">
+  <div class="bloco-11111">1</div>
+  <div class="bloco-22222">2</div>
+  <div class="bloco-33333">3</div>    
+ </main>
+ <p>Por padrão toda "flex-basis: auto" puxará a largura e altura que está no css > olhe para a height e width declaradas</p>
 
 
+<h4>Exemplo sem uma height e width declaradas no CSS: </h4>
+<h4> "flex-basis: auto;"</h4>
+<main class="container-4">
+  <div class="bloco-111110">1</div>
+  <div class="bloco-222220">2</div>
+  <div class="bloco-333330">3</div>    
+ </main>
+<p>Neste caso não acontece nenhuma alteração, pois nossa "flex-basis: auto;" é auto ainda. <br>
+Se incluirmos "flex-basis: 0;" acontecerá o mesmo, ficarão apenas com o tamanho minimo que possui o seu conteudo. <br> 
+<p></p>
+<h4> 
+Mas então "flex-basis: auto;" é a mesma coisa que "flex-basis: 0;"? <br> 
+<b>NÃO!</b> </h4> 
+<br>
+
+<h4>Exemplo diferença entre "flex-basis: 0;" e "flex-basis: auto;" </h4>
+<h4> "flex-basis: 0;"</h4>
+<main class="container-4">
+  <div class="bloco-1111100">1</div>
+  <div class="bloco-2222200">225466484223</div>
+  <div class="bloco-3333300">3</div>    
+ </main>
+<p>Aqui demos ao nosso bloco 1 e 2 um flex-grow: 1; e para o 3 um flex-grow: 2; <br>
+Ocore que nosso bloco 2 não aumentará o tamanho conforme os outros blocos, ele apenas será preenchido por todos os elementos <br>
+pois o limite do conteudo e dos elementos é que são levados em conta</p>
+
+<h4> "flex-basis: auto;"</h4>
+<main class="container-4">
+  <div class="bloco-11111000">1</div>
+  <div class="bloco-22222000">225466484223</div>
+  <div class="bloco-33333000">3</div>    
+ </main>
+<p>Já aqui temos os mesmos flex-grow incluidos acima. <br>
+Porém, ao colocamor "flex-basis: auto;" em todos os nossos blocos, ele também terá um espaço como o restante dos blocos<br>
+ O bloco 1 e o bloco dois terão o mesmo espaço aumentado devido ao "flex-grow: 1;" <br>
+ Já o bloco 3 terá o dobro proporcional, já que possui "flex-grow: 2;"<br>
+<b>Logo:</b><br>
+Nosso "flex-basis: auto;" leva em consideração nosso "flex-grow"</p>
+
+<h4>Outro exemplo sem uma height e width declaradas no CSS: </h4>
+<h4>aqui nosso "flex-grow" é 0</h4>
+<h4> Bloco 1 "flex-basis: 50px;"</h4>
+<h4> Bloco 2 "flex-basis: 100px;"</h4>
+<h4> Bloco 3 "flex-basis: 200px;"</h4>
+<main class="container-4">
+  <div class="bloco-111110000">1</div>
+  <div class="bloco-222220000">2</div>
+  <div class="bloco-333330000">3</div>    
+ </main>
+
+
+<!--           FLEX             -->
+
+<h3>FLEX</h3>
+<h4>é a junção de três propriedades (flex-grow / flex-shrink / flex-basis) </h4>
+<h4> aqui voltamos a definir uma height e width para nossos blocos </h4>
+<br> 
+<h4> "flex: 0 1 auto;"</h4>
+<main class="container-5">
+  <div class="bloco-010">1</div>
+  <div class="bloco-020">2</div>
+  <div class="bloco-030">3</div>    
+ </main>
+
+
+ <!--           ALIGN-SELF              -->
+
+<h3>ALIGN-SELF </h3>
+<h4>podemos mudar a direção de um dos blocos, mesmo que nosso conteinter esteja centralizado por exemplo.   </h4>
+<br> 
+<h4> "align-self: flex-start;"</h4>
+<main class="container-6">
+  <div class="bloco-0100">1</div>
+  <div class="bloco-0200">2</div>
+  <div class="bloco-0300">3</div>    
+ </main>
+
+<h4>Outro exemplo </h4>
+ <h4> "align-self: flex-end;"</h4>
+<main class="container-6">
+  <div class="bloco-01000">1</div>
+  <div class="bloco-02000">2</div>
+  <div class="bloco-03000">3</div>    
+ </main>
+<p>aqui utlizamos "flex-end" no bloco 2</p>
 </body>
 </html>

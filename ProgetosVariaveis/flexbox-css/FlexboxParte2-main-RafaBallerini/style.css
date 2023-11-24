@@ -100,7 +100,8 @@
   /* width: 400px; - usamos no flex-shrink*/
 }
 
-/* ORDER ********************/
+/* ORDER ************************************************************************/
+
 /* quando o order estiver zero, a ordem dos nossos elementos respeitará o HTML */
 
 .bloco-01 {
@@ -202,4 +203,570 @@
 /* EXEMPLO com vários blocos*/
 /* PODEMOS SEPARAR CADA BLOCO POR UMA CONDIÇÃO ESPECIFICA*/
 
-/* 12:14 */
+/* OUTRO EXEMPLO UTILIZANDO O MESMO ORDER EM DOIS BLOCOS*/
+/* quando incluimos duas order iguais a um mesmo bloco, eles se intercalam levando em conta como estão dispostos no HTML*/
+
+.bloco-11 {
+  order: 1;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  font-size: 40px;
+  border-radius: 50%; 
+  background-color: #adc7e9;
+}
+
+.bloco-22 {
+  order: 1;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  font-size: 40px;
+  border-radius: 50%; 
+  background-color: #ecb7ec;
+}
+
+.bloco-33 {
+  order: -1;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  font-size: 40px;
+  border-radius: 50%; 
+  background-color: #ff9999;
+}
+
+/* FLEX-GROW ***********************************/
+/* define o crescimento de um ou mais itens de uma classe caso seja necessário */
+
+.container-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  align-content: center;
+  row-gap: 10px;
+  column-gap: 30px;
+
+  /* indiferente: */
+  background-color: #dda9df80;
+  padding: 16px;
+  height: 200px;
+  /* width: 400px; - usamos no flex-shrink*/
+}
+
+.bloco-00001 {
+  order: 0;  
+  flex-grow: 1;  /*o zero mantem o padrão dos elementos*/
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  font-size: 40px;
+  border-radius: 50%;
+ background-color: #adc7e9;
+}
+
+.bloco-00002 {
+  order: 0; 
+  flex-grow: 0;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  font-size: 40px;
+  border-radius: 50%;    
+  background-color: #ecb7ec;
+}
+
+.bloco-00003 {
+  order: 0;
+  flex-grow: 0;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  font-size: 40px;
+  border-radius: 50%;  
+  background-color: #ff9999;
+}
+
+/* OUTRO EXEMPLO COM DOIS BLOCOS COM "flex-grow: 1;"*/
+
+.bloco-000002 {
+  order: 0; 
+  flex-grow: 1;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  font-size: 40px;
+  border-radius: 50%;    
+  background-color: #ecb7ec;
+}
+
+/* OUTRO EXEMPLO COM DOIS BLOCOS COM "flex-grow: 2;" no bloco 1*/
+
+.bloco-000001 {
+  order: 0;  
+  flex-grow: 2;  /*o zero mantem o padrão dos elementos*/
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  font-size: 40px;
+  border-radius: 50%;
+ background-color: #adc7e9;
+}
+
+.bloco-000003 {
+  order: 0;
+  flex-grow: 1;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  font-size: 40px;
+  border-radius: 50%;  
+  background-color: #ff9999;
+}
+
+/*    FLEX-SHRINK       ***********************************/
+/* faz com que os nossos blocos encolham para caber dentro do container */
+
+/*para isso nosso container dever ter uma largura máxima, se não els vão pode do tamanho que quiserem sem encolher, 
+e também não pode ter o "flex-wrap: nowrap", pois caso o contrário eles não vão poder descer caso não caibam dentro do nosso container*/
+.container-3 {
+  width: 180px; /*precisa ter uma largura*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap; /* */
+  align-content: center;
+  row-gap: 10px;
+  column-gap: 30px;
+
+  /* indiferente: */
+  background-color: #b8dfa980;
+  padding: 16px;
+  height: 200px;
+  /* width: 400px; - usamos no flex-shrink*/
+}
+
+.bloco-111 {
+  order: 0;  
+  flex-grow: 0;  /*o zero mantem o padrão dos elementos*/
+  flex-shrink: 1;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  font-size: 40px;
+  border-radius: 50%;
+ background-color: #adc7e9;
+}
+
+.bloco-222 {
+  order: 0; 
+  flex-grow: 0;
+  flex-shrink: 1;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  font-size: 40px;
+  border-radius: 50%;    
+  background-color: #ecb7ec;
+}
+
+
+.bloco-333 {
+  order: 0;
+  flex-grow: 0;
+  flex-shrink: 1;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  font-size: 40px;
+  border-radius: 50%;  
+  background-color: #ff9999;
+}
+
+/* OUTRO EXEMPLO COM "flex-shrink: 2;" no bloco 3*/
+
+
+.bloco-3333 {
+  order: 0;
+  flex-grow: 0;
+  flex-shrink: 2;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  font-size: 40px;
+  border-radius: 50%;  
+  background-color: #ff9999;
+}
+
+/*  FLEX-BASIS         ***********************************/
+
+.container-4 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap; 
+  align-content: center;
+  row-gap: 10px;
+  column-gap: 30px;
+
+  /* indiferente: */
+  background-color: #7fdff080;
+  padding: 16px;
+  height: 200px;
+  }
+
+  .bloco-11111 {
+    order: 0;  
+    flex-grow: 0;  /*o zero mantem o padrão dos elementos*/
+    flex-shrink: 1;
+    flex-basis: auto;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    font-size: 40px;
+    border-radius: 50%;
+   background-color: #adc7e9;
+  }
+  
+  .bloco-22222 {
+    order: 0; 
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    font-size: 40px;
+    border-radius: 50%;    
+    background-color: #ecb7ec;
+  }
+  
+    .bloco-33333 {
+    order: 0;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    font-size: 40px;
+    border-radius: 50%;  
+    background-color: #ff9999;
+  }
+
+  /* Exemplo sem uma height e width declaradas no CSS: */
+  
+  .bloco-111110 {
+    order: 0;  
+    flex-grow: 0;  /*o zero mantem o padrão dos elementos*/
+    flex-shrink: 1;
+    flex-basis: auto;
+  
+    text-align: center;
+    font-size: 40px;
+    border-radius: 50%;
+   background-color: #adc7e9;
+  }
+  
+  .bloco-222220 {
+    order: 0; 
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    
+    text-align: center;
+    font-size: 40px;
+    border-radius: 50%;    
+    background-color: #ecb7ec;
+  }
+  
+    .bloco-333330 {
+    order: 0;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    
+    text-align: center;
+    font-size: 40px;
+    border-radius: 50%;  
+    background-color: #ff9999;
+  }
+
+  /* 1 Exemplo diferença entre "flex-basis: 0;" e "flex-basis: auto;" */
+
+  .bloco-1111100 {
+    order: 0;  
+    flex-grow: 1;  
+    flex-shrink: 1;
+    flex-basis: 0;
+  
+    text-align: center;
+    font-size: 40px;
+    border-radius: 50%;
+   background-color: #adc7e9;
+  }
+  
+  .bloco-2222200 {
+    order: 0; 
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    
+    text-align: center;
+    font-size: 40px;
+    border-radius: 50%;    
+    background-color: #ecb7ec;
+  }
+  
+    .bloco-3333300 {
+    order: 0;
+    flex-grow: 2;
+    flex-shrink: 1;
+    flex-basis: 0;
+    
+    text-align: center;
+    font-size: 40px;
+    border-radius: 50%;  
+    background-color: #ff9999;
+  }
+
+  /* 2 Exemplo diferença entre "flex-basis: 0;" e "flex-basis: auto;" */
+
+  .bloco-11111000 {
+    order: 0;  
+    flex-grow: 1;  
+    flex-shrink: 1;
+    flex-basis: auto;
+  
+    text-align: center;
+    font-size: 40px;
+    border-radius: 50%;
+   background-color: #adc7e9;
+  }
+  
+  .bloco-22222000 {
+    order: 0; 
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    
+    text-align: center;
+    font-size: 40px;
+    border-radius: 50%;    
+    background-color: #ecb7ec;
+  }
+  
+    .bloco-33333000 {
+    order: 0;
+    flex-grow: 2;
+    flex-shrink: 1;
+    flex-basis: auto;
+    
+    text-align: center;
+    font-size: 40px;
+    border-radius: 50%;  
+    background-color: #ff9999;
+  }
+
+  /* Exemplo sem uma height e width declaradas no CSS: */
+
+  .bloco-111110000 {
+    order: 0;  
+    flex-grow: 0;  
+    flex-shrink: 1;
+    flex-basis: 50px;
+  
+    text-align: center;
+    font-size: 40px;
+    border-radius: 50%;
+   background-color: #adc7e9;
+  }
+  
+  .bloco-222220000 {
+    order: 0; 
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 100px;
+    
+    text-align: center;
+    font-size: 40px;
+    border-radius: 50%;    
+    background-color: #ecb7ec;
+  }
+  
+    .bloco-333330000 {
+    order: 0;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 200px;
+    
+    text-align: center;
+    font-size: 40px;
+    border-radius: 50%;  
+    background-color: #ff9999;
+  }
+
+  /*  FLEX         ***********************************/
+ /*é a junção de três propriedades (flex-grow / flex-shrink / flex-basis)*/
+
+  /*aqui voltamos a definir uma height e width para nossos blocos*/
+
+.container-5 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap; 
+  align-content: center;
+  row-gap: 10px;
+  column-gap: 30px;
+
+  /* indiferente: */
+  background-color: #f0997f80;
+  padding: 16px;
+  height: 100px;
+  }
+
+  .bloco-010 {
+    order: 0;  
+    /* flex-grow: 0;  
+    flex-shrink: 1;
+    flex-basis: auto; */
+    flex: 0 1 auto;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    font-size: 40px;
+    border-radius: 50%;
+   background-color: #adc7e9;
+  }
+
+  .bloco-020 {
+    order: 0; 
+    /* flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto; */
+    flex: 0 1 auto;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    font-size: 40px;
+    border-radius: 50%;    
+    background-color: #ecb7ec;
+  }
+  
+    .bloco-030 {
+    order: 0;
+    /* flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto; */
+    flex: 0 1 auto;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    font-size: 40px;
+    border-radius: 50%;  
+    background-color: #ff9999;
+  }
+
+
+  /*  ALIGN-SELF         ***********************************/
+
+  /* podemos mudar a direção de um dos blocos, mesmo que nosso conteinter esteja centralizado por exemplo: */
+
+  /* USANDO > 
+  align-self: flex-start;*/
+
+  .container-6 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; /* mesma coisa que "align-self: center"*/
+    flex-wrap: nowrap; 
+    align-content: center;
+    row-gap: 10px;
+    column-gap: 30px;
+  
+    /* indiferente: */
+    background-color: #dbf07f56;
+    padding: 16px;
+    height: 200px;
+    }
+  
+    .bloco-0100 {
+      order: 0;  
+      flex: 0 1 auto;
+      align-self: flex-start;
+      height: 50px;
+      width: 50px;
+      text-align: center;
+      font-size: 40px;
+      border-radius: 50%;
+     background-color: #adc7e9;
+    }
+  
+    .bloco-0200 {
+      order: 0; 
+      flex: 0 1 auto;
+      height: 50px;
+      width: 50px;
+      text-align: center;
+      font-size: 40px;
+      border-radius: 50%;    
+      background-color: #ecb7ec;
+    }
+    
+      .bloco-0300 {
+      order: 0;
+      flex: 0 1 auto;
+      height: 50px;
+      width: 50px;
+      text-align: center;
+      font-size: 40px;
+      border-radius: 50%;  
+      background-color: #ff9999;
+    }
+
+ /* OUTRO EXEMPLO: */   
+   
+  /* USANDO > 
+  align-self: flex-end;*/
+
+  .bloco-01000 {
+    order: 0;  
+    flex: 0 1 auto;
+    align-self: flex-start;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    font-size: 40px;
+    border-radius: 50%;
+   background-color: #adc7e9;
+  }
+
+  .bloco-02000 {
+    order: 0; 
+    flex: 0 1 auto;
+    align-self: flex-end;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    font-size: 40px;
+    border-radius: 50%;    
+    background-color: #ecb7ec;
+  }
+  
+    .bloco-03000 {
+    order: 0;
+    flex: 0 1 auto;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    font-size: 40px;
+    border-radius: 50%;  
+    background-color: #ff9999;
+  }
