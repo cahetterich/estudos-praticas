@@ -13,9 +13,13 @@
 
 /*ALTERAMOS: 
 
-nav e aside com : flex: 1 1 200px;
-main :  flex: 20 1 500px;
-incluimos todos os seletores de cores iguais, com a mesma flex e margin em uma única sessão (compactar)
+NAV : flex: 1 1 100vw;   - VW - total largura horizontal pag.
+MAIN :  flex: 20 1 500px; - reduzimos a altura da main - não sendo necessário a regra de largura de 717px do layout 2
+na @MEDIA de 923px : alteramos a altura do "height: calc(100vh - 436px);" e
+atribuimos altura a NAV e sua margem que ficará em 436px  - incluimos links em nossa NAV*
+Determinamos configurações de "A"
+Incluimos na NAV "align-items: center;" + "justify-content: center;"  
+NAV A = "margin: 5%;" + "font-size: 20pt;"
 
 */
 
@@ -29,7 +33,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     margin: 3px;
-    flex: 1 1 100vw;  /*VW - total de área na pag.*/
+    flex: 1 1 100vw;  /*VW - total largura horizontal pag.*/ 
 }
 
 header, nav, main, aside, footer {
@@ -44,13 +48,20 @@ header {
 }
 
 nav {
-    flex: 1 1 100vw;    
+    flex: 1 1 100vw;    /*VW - total largura horizontal pag.*/ 
     height: 100px;
+    align-items: center;
+    justify-content: center; /*alinahmos nossos links*/
+}
+
+nav a {
+    margin: 5%;
+    font-size: 20pt;
 }
 
 main {   
     flex: 20 1 500px;   /*cresce 20x mais que os outros elementos*/
-    height: calc(100vh - 330px); /*altura fixa para cada elemento  calc(header(100px), footer(100px), margin=(3px+3px) * 4 = 24px / ou seja 100px + 100px + 24ps = 224px*/
+    height: calc(100vh - 330px); /*reduzimos a altura da main */
 }
 
 aside {   
@@ -60,6 +71,12 @@ aside {
 footer {    
     flex: 1 1 100vw; 
     height: 100px; /*altura fixa para cada elemento*/
+}
+
+
+a {   /*LINKS NAV - possuem uma formatação padrão, remoção do sublinhado */
+    text-decoration: none;
+    color: inherit;
 }
 
 
@@ -75,7 +92,7 @@ footer {
     as propriedades definidas anteriormente, apenas as que contem mudanção*/
 
     main {
-        height: calc(100vh - 300px);  /*recebe uma redução de mais 100px*/
+        height: calc(100vh - 436px);  /*recebe uma redução de mais 100px*/
     }
 
     aside {
@@ -83,22 +100,6 @@ footer {
         height: 100px; /*altura fixa de 100px*/
     }
 }
-
-/*NOVA REGRA PARA NAV E  MAIN PARA QUANDO NÃO COUBEREM NA MESMA LINHA*/
-
-@media only screen and (max-width: 717px)  {
-
-    nav {  
-        height: 100px; /*para simplificar a nav terá 100px de altura, que é descontada da main*/
-     }
-
-    main{
-        height: calc(100vh - 436px);  /*De 300 passara a 436px, descontados o tamanho na nav + a margin superior + inferior de 3px cada, */
-    }
-}
-
-
-
 
 
 /* ********************   LAYOUT 4    ******************* */
