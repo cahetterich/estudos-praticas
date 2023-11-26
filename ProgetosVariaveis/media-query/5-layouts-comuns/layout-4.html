@@ -7,7 +7,7 @@
  4 - Responsividade.
  5 - Manipulação do CSS com JavaScript.  -->
 
- <!-- LAYOUT 4 -   -->
+ <!-- LAYOUT 4 -  MENU NO CABEÇALHO  -->
 
  <!DOCTYPE html>
  <html lang="pt-br">
@@ -19,15 +19,23 @@
  </head>
 
  <body>
-    <header> Cabeçalho </header>
-    
-    <nav> 
-      <a href="#">Início</a>
-      <a href="#">Produtos</a>
-      <a href="#">Sobre</a>
-      <a href="#">Contato</a>
-    </nav>
 
+    <header> 
+      <a href="#" id="logo">LOGO</a> 
+
+      <button id="openMenu">&#9776;</button>    <!-- &#9776; é representado no navegador como os três taços que representa o menu -->
+   
+      <nav id="menu"> 
+         <button id="closeMenu">X</button>
+         <a href="#">Início</a>
+         <a href="#">Produtos</a>
+         <a href="#">Sobre</a>
+         <a href="#">Contato</a>
+       </nav>
+   
+   </header>
+    
+   
     <main> Principal </main>
     <aside> Relacionado </aside> <!-- Informações e Links Relacionados ao Conteudo Principal -->
     <footer> Rodapé </footer>    <!-- Informações de autoria, Direitos Autorais, Contato, Mapa do site, Links, Documentos Relacionados -->

@@ -9,10 +9,15 @@
 
 /* ********************          LAYOUT 4  /   px       *******************************************
 
-- Menu (nav) abaixo do cabeçalho (header)     */
+- MENU NO CABEÇALHO (HEADER)   */
 
 /*ALTERAMOS: 
 
+definimos o ID LOGO  -  "flex: 0 1 200px; + background: #c9c9c9;"
+NAV removemos a  - altura fixa de "height: 100px;"  +  alinhamos nossos links à direita - "justify-content: flex-end;"
+NAV A - mudamos para  "margin: 3%;"
+no calculo da altura da MAIN - "height: calc(100vh - 224px);" e alteramos também na 
+MEDIA 923px > "height: calc(100vh - 330px);"
 
 */
 
@@ -40,21 +45,35 @@ header {
     height: 100px; /*altura fixa para cada elemento*/
 }
 
+header #logo {
+    flex: 0 1 200px; /* não irá crescer, tendo como padrão 1 e tamanho inicial de 200px */
+    background: #c9c9c9;
+}
+
+#openMenu, #closeMenu {
+    border: none;
+    background: none;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0px 5px 0px 5px;
+    cursor: pointer;
+    display: none;
+}
+
 nav {
-    flex: 1 1 100vw;    /*VW - total largura horizontal pag.*/ 
-    height: 100px;
+    flex: 1 1 100vw;    /*VW - total largura horizontal pag.*/     
     align-items: center;
-    justify-content: center; /*alinahmos nossos links*/
+    justify-content: flex-end; /*alinahmos nossos links a direita */
 }
 
 nav a {
-    margin: 5%;
+    margin: 3%;
     font-size: 20pt;
 }
 
 main {   
     flex: 20 1 500px;   /*cresce 20x mais que os outros elementos*/
-    height: calc(100vh - 330px); /*reduzimos a altura da main */
+    height: calc(100vh - 224px); /*no calculo da altura da MAIN */
 }
 
 aside {   
@@ -85,7 +104,7 @@ a {   /*LINKS NAV - possuem uma formatação padrão, remoção do sublinhado */
     as propriedades definidas anteriormente, apenas as que contem mudanção*/
 
     main {
-        height: calc(100vh - 436px);  /*recebe uma redução de mais 100px*/
+        height: calc(100vh - 330px);  /*recebe uma redução */
     }
 
     aside {
@@ -94,9 +113,35 @@ a {   /*LINKS NAV - possuem uma formatação padrão, remoção do sublinhado */
     }
 }
 
+/*****  BARRA LATERAL MENU  - apartir de > 717px *******/
 
+@media only screen and (max-width: 717px) { 
+    #openMenu, #closeMenu {
+        display: block;  /* visualização retorna para flesh*/
+    }
 
+    #openMenu {
+        margin-left: auto; /*espaço horizontal a esquerda será toto o espaço não utilizado pelos elementos contidos em nosso container pai (NAV)*/
+    }
 
+    #closeMenu {
+        position: fixed; /*posição fixa em relação ao container */
+        right: 15px; /*dando uma posição fixa, podemos colocar o icone "X" ao lado direito da tela*/
+        top: 15px;
+    }
+
+    nav { 
+        position: fixed; /*nav fica sobreposto aos demais elementos da pág.*/
+        flex-direction: column;
+        width: 100vw;
+        height: 100vw;
+        background: rgba(255, 255, 255, 0.8);
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        display: none;  /* o que deixa o menu nav invisivel - manipulado com JavaScript*/
+    }
+}
 /* ********************   LAYOUT 5    ******************* */
 
 
