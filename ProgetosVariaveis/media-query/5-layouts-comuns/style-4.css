@@ -1,0 +1,103 @@
+/* Nome dos arquivos CSS deve: 
+1 - Letras minúsculas de "a" a "z"
+2 - Números de 0 a 9
+3 - Sublinhado (underline) "_"
+4 - Hífen "-"
+5- Sem espaços */
+
+
+
+/* ********************          LAYOUT 4  /   px       *******************************************
+
+- Menu (nav) abaixo do cabeçalho (header)     */
+
+/*ALTERAMOS: 
+
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3px;
+    flex: 1 1 100vw;  /*VW - total largura horizontal pag.*/ 
+}
+
+header, nav, main, aside, footer {
+    background: #a1a1a1; 
+    display: flex;
+    margin: 3px;  
+}
+
+header {    
+    flex: 1 1 100vw;    
+    height: 100px; /*altura fixa para cada elemento*/
+}
+
+nav {
+    flex: 1 1 100vw;    /*VW - total largura horizontal pag.*/ 
+    height: 100px;
+    align-items: center;
+    justify-content: center; /*alinahmos nossos links*/
+}
+
+nav a {
+    margin: 5%;
+    font-size: 20pt;
+}
+
+main {   
+    flex: 20 1 500px;   /*cresce 20x mais que os outros elementos*/
+    height: calc(100vh - 330px); /*reduzimos a altura da main */
+}
+
+aside {   
+    flex: 1 1 200px;    
+}
+
+footer {    
+    flex: 1 1 100vw; 
+    height: 100px; /*altura fixa para cada elemento*/
+}
+
+
+a {   /*LINKS NAV - possuem uma formatação padrão, remoção do sublinhado */
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/*     **********************************  REGRA @MEDIA  ****************************************************************** */
+
+/* 1 - Largura e altura da janela de visualização
+2 - Largura e altura do dispositivo
+3 - Orientação ( tablet/ smartphone está no modo paisagem ou retrato)
+4 - Resolução */
+
+@media only screen and (max-width: 923px) {  /* verifica se a tela do dispositivo não é maior que 923px, 
+    caso positivo as propriedades adicionadas são aplicadas no elemento, não sendo necessário adicionar todas 
+    as propriedades definidas anteriormente, apenas as que contem mudanção*/
+
+    main {
+        height: calc(100vh - 436px);  /*recebe uma redução de mais 100px*/
+    }
+
+    aside {
+        flex: 1 1 100vw;  /* propriedade flex alterada para ocupar 100% do espaço lateral/vertical*/
+        height: 100px; /*altura fixa de 100px*/
+    }
+}
+
+
+
+
+/* ********************   LAYOUT 5    ******************* */
+
+
+ 
