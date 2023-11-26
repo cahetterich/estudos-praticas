@@ -1,0 +1,109 @@
+/* Nome dos arquivos CSS deve: 
+1 - Letras minúsculas de "a" a "z"
+2 - Números de 0 a 9
+3 - Sublinhado (underline) "_"
+4 - Hífen "-"
+5- Sem espaços */
+
+
+
+/* ********************          LAYOUT 3  /   px       *******************************************
+
+- Menu (nav) abaixo do cabeçalho (header)     */
+
+/*ALTERAMOS: 
+
+nav e aside com : flex: 1 1 200px;
+main :  flex: 20 1 500px;
+incluimos todos os seletores de cores iguais, com a mesma flex e margin em uma única sessão (compactar)
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3px;
+    flex: 1 1 100vw;  /*VW - total de área na pag.*/
+}
+
+header, nav, main, aside, footer {
+    background: #a1a1a1; 
+    display: flex;
+    margin: 3px;  
+}
+
+header {    
+    flex: 1 1 100vw;    
+    height: 100px; /*altura fixa para cada elemento*/
+}
+
+nav {
+    flex: 1 1 100vw;    
+    height: 100px;
+}
+
+main {   
+    flex: 20 1 500px;   /*cresce 20x mais que os outros elementos*/
+    height: calc(100vh - 330px); /*altura fixa para cada elemento  calc(header(100px), footer(100px), margin=(3px+3px) * 4 = 24px / ou seja 100px + 100px + 24ps = 224px*/
+}
+
+aside {   
+    flex: 1 1 200px;    
+}
+
+footer {    
+    flex: 1 1 100vw; 
+    height: 100px; /*altura fixa para cada elemento*/
+}
+
+
+/*     **********************************  REGRA @MEDIA  ****************************************************************** */
+
+/* 1 - Largura e altura da janela de visualização
+2 - Largura e altura do dispositivo
+3 - Orientação ( tablet/ smartphone está no modo paisagem ou retrato)
+4 - Resolução */
+
+@media only screen and (max-width: 923px) {  /* verifica se a tela do dispositivo não é maior que 923px, 
+    caso positivo as propriedades adicionadas são aplicadas no elemento, não sendo necessário adicionar todas 
+    as propriedades definidas anteriormente, apenas as que contem mudanção*/
+
+    main {
+        height: calc(100vh - 300px);  /*recebe uma redução de mais 100px*/
+    }
+
+    aside {
+        flex: 1 1 100vw;  /* propriedade flex alterada para ocupar 100% do espaço lateral/vertical*/
+        height: 100px; /*altura fixa de 100px*/
+    }
+}
+
+/*NOVA REGRA PARA NAV E  MAIN PARA QUANDO NÃO COUBEREM NA MESMA LINHA*/
+
+@media only screen and (max-width: 717px)  {
+
+    nav {  
+        height: 100px; /*para simplificar a nav terá 100px de altura, que é descontada da main*/
+     }
+
+    main{
+        height: calc(100vh - 436px);  /*De 300 passara a 436px, descontados o tamanho na nav + a margin superior + inferior de 3px cada, */
+    }
+}
+
+
+
+
+
+/* ********************   LAYOUT 4    ******************* */
+
+/* ********************   LAYOUT 5    ******************* */
+
+
+ 
