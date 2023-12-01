@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!-- Versão LOCAL DO NOSSO Bootstrap - usao quando o site está em fase de construção/desenvolvimento -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+     <!-- Versão LOCAL DO NOSSO Bootstrap -->
+     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Aula 09 - Imagens e Figuras</title>
+</head>
+<body>
+
+    <h1>Aula 09 - Imagens e Figuras</h1>
+    <hr>
+    <p>Como transformar uma imagem em responsiva no Bootstrap</p>
+    
+    <h3><a href="/aula01/index.html">Voltar ao Início</a></h3>
+    <p></p>
+
+    <h2>img-fluid</h2>
+    <p>obedece o tamanho do container, portanto se nossa tela diminuir, logo a imagem também vai</p>
+    <div class="container">
+        <img src="../aula01/img/Lago_Inferiore_Fusine_web_ photo Nicola Brollo-2.jpg" alt="Imagem Responsiva" class="img-fluid">
+    </div>
+
+    <h2>img-thumbnail</h2>
+    <p>dá bordas levemente arredondada a nossa imagem</p>
+    <div class="container">
+        <img src="../aula01/img/Lago_Inferiore_Fusine_web_ photo Nicola Brollo-2.jpg" alt="Imagem Responsiva" class="img-thumbnail">
+    </div>
+
+    <h2>img-thumbnail + img-fluid </h2>
+    <p></p>
+    <div class="container">
+        <img src="../aula01/img/Lago_Inferiore_Fusine_web_ photo Nicola Brollo-2.jpg" alt="Imagem Responsiva" class="img-fluid img-thumbnail">
+    </div>
+
+    <h2>rounder + img-fluid </h2>
+    <p>arredondadas a borda da nossa imagem</p>
+    <div class="container">
+        <img src="../aula01/img/Lago_Inferiore_Fusine_web_ photo Nicola Brollo-2.jpg" alt="Imagem Responsiva" class="img-fluid rounded">
+    </div>
+
+    <h2> img-thumbnail + float-start + p class="lead" </h2>
+    <p>neste caso nosso paragrafo fica do lado direot da imagem acompanhando</p>
+    <div class="container">
+        <img src="../aula01/img/images.png" class="img-thumbnail float-start">
+        <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae quod libero sapiente similique aspernatur sunt ratione numquam neque, aut tenetur eos saepe magnam quaerat rerum quibusdam deserunt sed excepturi reiciendis illo vitae? Ad eveniet deleniti sit porro eligendi aspernatur placeat voluptate dolorum itaque debitis facilis hic vel, quidem ducimus non omnis libero mollitia ex sunt eius laboriosam enim animi! Est, voluptate. Impedit sunt, quisquam cumque reiciendis iure sit eos iste?</p>
+    </div>
+
+    <h2> margem na imagem</h2>
+    <p>neste caso adicionamos um me-3 para dar margem para nossa imagem</p>
+    <div class="container">
+        <img src="../aula01/img/images.png" class="img-thumbnail float-start me-3">
+        <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae quod libero sapiente similique aspernatur sunt ratione numquam neque, aut tenetur eos saepe magnam quaerat rerum quibusdam deserunt sed excepturi reiciendis illo vitae? Ad eveniet deleniti sit porro eligendi aspernatur placeat voluptate dolorum itaque debitis facilis hic vel, quidem ducimus non omnis libero mollitia ex sunt eius laboriosam enim animi! Est, voluptate. Impedit sunt, quisquam cumque reiciendis iure sit eos iste?</p>
+    </div>
+
+    <h2>img-thumbnail + float-end + ms-3</h2>
+    <p>imagem no final do nosso texto </p>
+    <div class="container">
+        <img src="../aula01/img/images.png" class="img-thumbnail float-end ms-3">
+        <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae quod libero sapiente similique aspernatur sunt ratione numquam neque, aut tenetur eos saepe magnam quaerat rerum quibusdam deserunt sed excepturi reiciendis illo vitae? Ad eveniet deleniti sit porro eligendi aspernatur placeat voluptate dolorum itaque debitis facilis hic vel, quidem ducimus non omnis libero mollitia ex sunt eius laboriosam enim animi! Est, voluptate. Impedit sunt, quisquam cumque reiciendis iure sit eos iste?</p>
+    </div>
+    
+    <h2>Imagem centralizada</h2>
+    <p>damos text-center ao nosso container </p>
+    <div class="container text-center">
+        <img src="../aula01/img/images.png" class="img-thumbnail">        
+    </div>
+
+    <h2>Exibição de Figuras - com legenda</h2>
+    <p> figure + img-fluid rounded + figcaption</p>
+    <div class="container text-center">
+       <figure class="figure">
+        <figcaption class="figcaption text-start">Legenda acima da imagem</figcaption>        
+        <img src="../aula01/img/images.png" alt="imagem" class="img-fluid rounded">
+        <figcaption class="figcaption text-end">Legenda abaixo da figura</figcaption>
+       </figure>       
+    </div>
+
+
+</body>
+</html>
+
