@@ -8,33 +8,140 @@
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
         <!-- Versão LOCAL DO NOSSO Bootstrap -->
         <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
-        
-    <title>Contêineres</title>
+
+    <title>Tipografia</title>
 </head>
 <body>
 
     <h3><a href="/aula01/index.html">Voltar ao Início</a></h3>
 
     <div class="container-fluid bg-info">
-        <h1>Aula 05 - conteiner-fluid</h1>
+        <h1>Aula 08 - Tipografia</h1>
         <hr>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nulla debitis voluptatibus, ad laborum exercitationem corporis deleniti. Aspernatur ad necessitatibus sunt rem provident dolores perferendis voluptatum similique corrupti! Minus distinctio ab, rerum in fugit id deserunt, deleniti nostrum laborum non quaerat a voluptatibus sunt soluta molestiae consequuntur autem, tenetur architecto dolorem enim. 
-        </p>
+        <p>por padrão o bootstrap já tem sua própria tipografia(font), veja:</p>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nulla debitis voluptatibus, ad laborum exercitationem corporis deleniti. Aspernatur ad necessitatibus sunt rem provident dolores perferendis voluptatum similique corrupti! Minus distinctio ab, rerum in fugit id deserunt, deleniti nostrum laborum non quaerat a voluptatibus sunt soluta molestiae consequuntur autem, tenetur architecto dolorem enim. 
-        </p>
+       <div class="container">
+        <h1>h1 - Título de Nível 1</h1>
+        <h2>h2 - Título de Nível 2</h2>
+        <h3>h3 - Título de Nível 3</h3>
+        <h4>h4 - Título de Nível 4</h4>
+        <h5>h5 - Título de Nível 5</h5>
+        <h6>h6 - Título de Nível 6</h6>
+       </div>
     </div>
 
-    <!-- 
+    <h2>para mudar nossa tipografia podemos:</h2>
+    <p> usar paragrafos e definilos como h1, h2, h3, h4, h5 e h6 </p>
+   <div class="container">
+    <p class="h1">.h1 - Casse de Título Nível 1</p>
+    <p class="h2">.h2 - Casse de Título Nível 2</p>
+    <p class="h3">.h3 - Casse de Título Nível 3</p>
+    <p class="h4">.h4 - Casse de Título Nível 4</p>
+    <p class="h5">.h5 - Casse de Título Nível 5</p>
+    <p class="h6">.h6 - Casse de Título Nível 6</p>
+   </div> 
 
-       *container-fluid =
-            ocupa 100% da largura disponível
-    
-    -->
+   
+   <h2>Também podemos utilizar display:</h2>
+   <p> dessa forma geramos 6 elementos do tipo H1, mas com diversos display (1 ao 6)</p>
+  <div class="container">
+    <h1 class="display-1">Display 1</h1>
+    <h1 class="display-2">Display 2</h1>
+    <h1 class="display-3">Display 3</h1>
+    <h1 class="display-4">Display 4</h1>
+    <h1 class="display-5">Display 5</h1>
+    <h1 class="display-6">Display 6</h1>
+  </div>
 
+  <h2>Textos de paragrafos comuns:</h2>
+  <p> Usando p class="lead" - deixa o paragrafo melhor e uma fonte sofisticada, serve para destacar um trecho de texto</p>
+ <div class="container">
+   <p class="lead">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore adipisci voluptatibus autem, voluptatem quo molestiae maxime delectus! Blanditiis animi doloremque assumenda quidem repellat inventore facere, nam unde accusamus autem suscipit!
+   </p>
+ </div>
+
+ <h2>Marcações de texto HTML:</h2>
+ <div class="container">
+    <p>Texto em <mark>marcado</mark> - mark</p>
+    <p>Texto com aspecto de <del>excluído</del> - del</p>
+    <p>Texto <s>riscado</s> - s</p>
+    <p>Texto <ins>recém-inserido</ins> - ins</p>
+    <p>Texto <u>sublinhado</u> - u</p>
+    <p>Texto <small>pequeno</small> - small</p>
+    <p>Texto <strong>encorpado</strong> - strong</p>
+    <p>Texto <em>itálico</em> - em</p>
+ </div>
+
+ <h2>ABBR:</h2>
+ <p> Usando para abreviações pois MERN é a abreviação de Mongo, Express, React, Node</p>
+ <div class="container">
+    <abbr title="Mongo, Express, React, Node">MERN</abbr>
+ </div>
  
+ <h2>Blockquote:</h2>
+ <p> Bloco padrão de citação no bootstrap</p>
+ <div class="container">
+    <blockquote>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit fugiat eligendi asperiores iusto praesentium quos exercitationem facilis, repellendus, sint quisquam molestias. Dignissimos fugit, praesentium iusto molestiae quisquam consequatur accusamus soluta.</p>
+    </blockquote>
+ </div>
 
+ <h2>Blockquote + Figure (figcation) </h2>
+ <p> Bloco padrão de citação no bootstrap + referencias </p>
+ <div class="container">
+    <figure class="text-center">
+    <blockquote class="blockquote" cite="Fulano Famoso">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit fugiat eligendi asperiores iusto praesentium quos exercitationem facilis, repellendus, sint quisquam molestias. Dignissimos fugit, praesentium iusto molestiae quisquam consequatur accusamus soluta.</p>
+    </blockquote>
+    <figcation class="blockquote-footer">
+        <cite>Fulano Famoso</cite>, diretor de cinema
+    </figcation> 
+    </figure>
+ </div>
+ 
+ 
+ <h2>Formatação de lista</h2>
+ <p> list-unstyled = remove os marcadores da frente da lista e altera a margem</p>
+ <div class="container">
+    <ul class="list-unstyled">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+    </ul>
+    <hr>
+</div>
 
+ <h2>Lista um item ao lado do outro</h2>
+    <p> utilizado para organizar itens que precisam estar em uma mesma linha (nav/menu) </p>
+    <p> ul class="list-inline" + li class="list-inline-item" </p>
+    <ul class="list-inline">
+        <li class="list-inline-item">Item 1</li>
+        <li class="list-inline-item">Item 2</li>
+        <li class="list-inline-item">Item 3</li>
+        <li class="list-inline-item">Item 4</li>
+        <li class="list-inline-item">Item 5</li>        
+    </ul>
+</div>
+
+<h2>Lista um definições / descrições  dl</h2>
+
+<dl>
+    <dt>Termo 1</dt>
+    <dd>Descrição do termo 1</dd>
+    <dt>Termo 2</dt>
+    <dd>Descrição do termo 2</dd>
+    <dt>Termo 3</dt>
+    <dd>Descrição do termo 3</dd>
+    <dt>Termo 4</dt>
+    <dd>Descrição do termo 4</dd>
+    <dt>Termo 5</dt>
+    <dd>Descrição do termo 5</dd>
+</dl>
+</div>
 
    
 </body>
