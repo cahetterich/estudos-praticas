@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+
+    <!-- Versão LOCAL DO NOSSO Bootstrap - usao quando o site está em fase de construção/desenvolvimento -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>Layout GRID</title>
+
+    <style>
+        .h100 {
+            height: 100px;
+        }
+        .h400 {
+            height: 400px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h3><a href="/aula01/index.html">Voltar ao Início</a></h3>
+
+    <div class="container">
+        <div class="row">
+            <h1>Aula 06 - Layout em GRID</h1>
+            <hr>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nulla debitis voluptatibus, ad laborum exercitationem corporis deleniti. Aspernatur ad necessitatibus sunt rem provident dolores perferendis voluptatum similique corrupti! 
+            </p>
+
+            <div class="col-3 bg-dark bg-opacity-50 h400"></div>
+            <div class="col-6 bg-dark bg-opacity-75 h400"></div>
+            <div class="col-3 bg-dark bg-opacity-50 h400"></div>
+        </div>
+    </div>
+
+    <!-- 
+
+       *container = primeira classe definida
+            ocupa 100% da largura disponível
+
+            *row = segunda classe definida
+             define as linhas de forma horizontais
+
+                *col-3 =  
+                define que deve ter 3 colunas
+
+                    *bg-dar e bg-opacity =  
+                    define cores e opacidade   
+
+                        *h400 =  
+                        define a altura das colunas (definimos no style)
+
+    -->
+
+    
+    <div class="container">
+        <div class="row">
+            <h1>Se desejamos que nossa coluna do meio ocupe 9 colunas, definivmos para a restante apenas col</h1>
+            <hr>
+            <p>Pois assim ela divide o restante dos espaços das colunas com as outras div's que tenham a class col (largura dinamica - sem numero fixo)
+            </p>
+
+            <div class="col bg-dark bg-opacity-50 h400"></div>
+            <div class="col-9 bg-dark bg-opacity-75 h400"></div>
+            <div class="col bg-dark bg-opacity-50 h400"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <h1>Layout web - sem responsividade </h1>
+            <hr>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nulla debitis voluptatibus, ad laborum exercitationem corporis deleniti. Aspernatur ad necessitatibus sunt rem provident dolores perferendis voluptatum similique corrupti! 
+            </p>
+
+            <div class="col-12 bg-dark bg-opacity-50 h100"></div>
+            <div class="col-3 bg-dark bg-opacity-75 h400"></div>
+            <div class="col-9 bg-dark bg-opacity-25 h400"></div>
+            <div class="col-12 bg-dark bg-opacity-50 h100"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <h1>Layout mobile </h1>
+            <hr>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nulla debitis voluptatibus, ad laborum exercitationem corporis deleniti. Aspernatur ad necessitatibus sunt rem provident dolores perferendis voluptatum similique corrupti! 
+            </p>
+
+            <div class="col-12 bg-dark bg-opacity-50 h100"></div>
+            <div class="col-12 bg-dark bg-opacity-75 h400"></div>
+            <div class="col-12 bg-dark bg-opacity-25 h400"></div>
+            <div class="col-12 bg-dark bg-opacity-50 h100"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <h1>Layout web - responsivo mobile col-sm-3  / col-sm-9</h1>
+            <hr>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nulla debitis voluptatibus, ad laborum exercitationem corporis deleniti. Aspernatur ad necessitatibus sunt rem provident dolores perferendis voluptatum similique corrupti! 
+            </p>
+
+            <div class="col-12 bg-dark bg-opacity-50 h100"></div>
+            <div class="col-12 col-sm-3 bg-dark bg-opacity-75 h400"></div>
+            <div class="col-12 col-sm-9 bg-dark bg-opacity-25 h400"></div>
+            <div class="col-12 bg-dark bg-opacity-50 h100"></div>
+        </div>
+    </div>
+       
+    
+    <!-- Versão LOCAL DO NOSSO Bootstrap -->
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>    
+</body>
+</html>
