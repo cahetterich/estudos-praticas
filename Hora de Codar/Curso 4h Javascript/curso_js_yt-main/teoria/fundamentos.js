@@ -17,24 +17,30 @@ console.log(minhaVariavel);
 // 2.3 Variáveis e tipos de dados
 var meuNumero = 10; // Number
 
+console.log(meuNumero); // mostra meuNumero no console
+
+console.log(meuNumero + 5); // soma os números, mostrando 15 no console
+
+console.log("10" + 5); // aqui vai contatenar os números, pois 10 é uma string, logo no console aparecerá 105
+
 console.log(typeof meuNumero); //typeof mostra qual tipo de variavel é 
 
 var minhaString = "Texto"; // String - texto
 
-console.log(typeof minhaString);
+console.log(typeof minhaString);  // mostra qual tipo de dado é
 
 var meuBooleano = true; // Boolean - verdadeiro ou falso (variações)
 
 console.log(typeof meuBooleano);
 
-var meuObjeto = {}; // Object
+var meuObjeto = {}; // Object 
 var meuArray = []; // Array
 var minhaNull = null; // Null - sem valor, usado para iniciar algumas variaveis
-var meuUndefined; // Undefined
+var meuUndefined = undefined; // Undefined
 
-// 2.4 let e const
+// 2.4 let e const   - formas de declarar variveis 
 let teste = 1;
-const PI = 3.14; // const não altera, é constante
+const PI = 3.14; // const não altera, é constante - MAIS USADO profissionamente
 
 console.log(teste, PI);
 
@@ -48,15 +54,15 @@ console.log(x - y); // 5
 console.log(x * y); // 50
 console.log(x / y); // 2
 
-// Operadores de comparação
-console.log(x == y); // false
-console.log(x != y); // true
+// Operadores de comparação = false / true
+console.log(x == y); // false   "são igual?"
+console.log(x != y); // true    "são diferentes?"
 
-console.log("5" == 5); // verdadeiro / true 
-console.log("5" === 5); // falso / false 
-console.log("5" !== 5); // verdadeiro / true 
+console.log("5" == 5); // verdadeiro / true (compara semelhança - valor)
+console.log("5" === 5); // falso / false    (compara igualdade - tipo)
+console.log("5" !== 5); // verdadeiro / true (compara diferença - tipo e valor)
 
-// Operadores lógicos
+// Operadores lógicos  - tabela verdade (  AND &&   ou  OR || )
 console.log(x > y && y > 10); // true - AND / E
 console.log(x > y && y < 10);  // false - AND / E
 console.log(x < y && y < 10);  // false - AND / E
@@ -97,7 +103,7 @@ switch (fruta) {  // colocamos no switch aquilo que estamos avaliando
   case "Maçã":
     console.log("A const fruta é Maçã!");
     break;
-  default:
+  default: // é com um else, caso nenhum dos case seja verdadeiro/seja executado
     console.log("Nenhuma fruta selecionada");
 }
 
@@ -105,7 +111,7 @@ switch (fruta) {  // colocamos no switch aquilo que estamos avaliando
 
 // Loop for
 
-//contador, condição de limite + incremento ("i = i + 1" que é = a "i++"")
+//contador + condição de limite + incremento ("i = i + 1" que é = a "i++"")
 for (let i = 0; i < 5; i++) {
   console.log(i);    // 0, 1, 2, 3, 4
 }
