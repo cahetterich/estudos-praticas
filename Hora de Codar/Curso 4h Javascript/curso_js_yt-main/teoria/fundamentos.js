@@ -123,10 +123,10 @@ for (let i = 0; i < 5; i++) {
 
 // Loop while
 
-let i = 0;  // devemos criar a variavel de incremento "i" fora de While
-while (i < 5) {
-  console.log(i); // 0, 1, 2, 3, 4
-  i++;  // já o incremento fica no final do loop
+let k = 0;  // devemos criar a variavel de incremento "i" fora de While
+while (k < 5) {
+  console.log("O valor de k: " + k); // 0, 1, 2, 3, 4
+  k++;  // já o incremento fica no final do loop
 }
 
 // Loop do while
