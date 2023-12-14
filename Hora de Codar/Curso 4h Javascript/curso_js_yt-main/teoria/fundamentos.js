@@ -129,19 +129,23 @@ while (k < 5) {
   k++;  // já o incremento fica no final do loop
 }
 
-// Loop do while
+// Loop Do while
 
 let j = 0;   // também devemos criar a variavel de incremento "i" fora de While
 do {   // faça 
-  console.log(j); // 0, 1, 2, 3, 4
+  console.log("O valor de j: " + j); // 0, 1, 2, 3, 4
   j++;  // incremento 
 } while (j < 5); // while com () que dentro tem a condição de fim  
 
 // 2.8 Funções *************************************
 
+// function nome(arg1, arg2 ) { corpo }
+
 function cumprimentar(nome) {
-  console.log(`Olá, ${nome}!`);
+  console.log(`Olá, ${nome}!`); // ou ("Olá," + nome);  - o ${nome} é utilizado para chamar o argumento dentro da frase/string
 }
+
+//invocação = nome()
 cumprimentar("Maria"); // Olá, Maria!
 
 // 2.9 Escopo de Variáveis
@@ -158,15 +162,17 @@ function mostrarCor() {
 mostrarCor();
 console.log(cor); // azul
 
-// 2.10 Hoisting
+// 2.10 Hoisting   = içamento, puxa para "cima do código" a função e não abaixo como geralmente fazemos
 testeHoisting();
 
 function testeHoisting() {
   console.log("Deu certo!");
 }
 
-// 2.11 Arrow function
-const testandoArrow = () => console.log("Isso também é uma função");
+// 2.11 Arrow function = função de sintaxe resumida
+const testeArrow = () => console.log("Isso também é uma função");  // função de uma linha só 
+
+testeArrow(); // precisamos chamar para que apareça no console
 
 // 2.12 Truthy e Falsy
 const minhaVariavel1 = ""; // Falsy
