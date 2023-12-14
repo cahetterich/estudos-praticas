@@ -174,8 +174,8 @@ const testeArrow = () => console.log("Isso também é uma função");  // funç�
 
 testeArrow(); // precisamos chamar para que apareça no console
 
-// 2.12 Truthy e Falsy
-const minhaVariavel1 = ""; // Falsy
+// 2.12 Truthy e Falsy   = boolean 
+const minhaVariavel1 = ""; // Falsy - string vazia
 const minhaVariavel2 = "Algum texto"; // Truthy
 
 if (minhaVariavel1) {
@@ -192,17 +192,28 @@ if (minhaVariavel2) {
 
 // 2.13 Arrays
 
-// Array
-const numeros = [1, 2, 3, 4, 5];
-console.log(numeros[0]); // 1
+// Array = abertura e fechamendo de []
 
-// Adição de elementos
-numeros.push(6);
-console.log(numeros); // [1, 2, 3, 4, 5, 6]
+const numeros = [1, 2, 3, 4, 5];
+
+console.log(numeros[0]); // 1  - podemos puxar um elemento do array 
+
+console.log(numeros[2]); // 3
+
+
+// Metodos
+
+// Adição de elementos    
+numeros.push(6);  // coloca mais um elemento no array, no caso o 6
+console.log(numeros); // [1, 2, 3, 4, 5, 6] 
 
 // Remoção de elementos
-numeros.pop();
+numeros.pop();  //retira o último elemento do array, no caso o 6
 console.log(numeros); // [1, 2, 3, 4, 5]
+
+/*
+prototype => OBJETO -> deriva as suas caracteristicas em outro OBJETO
+*/
 
 // 2.14 Manipulação de Strings
 
