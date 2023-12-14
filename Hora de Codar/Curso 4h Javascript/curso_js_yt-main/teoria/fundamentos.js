@@ -135,7 +135,7 @@ let j = 0;   // também devemos criar a variavel de incremento "i" fora de While
 do {   // faça 
   console.log(j); // 0, 1, 2, 3, 4
   j++;  // incremento 
-} while (j < 5); // while com () que dentro tem a condição de fim 
+} while (j < 5); // while com () que dentro tem a condição de fim  
 
 // 2.8 Funções *************************************
 
