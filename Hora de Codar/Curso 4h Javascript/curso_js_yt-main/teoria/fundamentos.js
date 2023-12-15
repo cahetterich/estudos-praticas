@@ -209,7 +209,7 @@ console.log(numeros); // [1, 2, 3, 4, 5, 6]
 
 // Remoção de elementos
 numeros.pop();  //retira o último elemento do array, no caso o 6
-console.log(numeros); // [1, 2, 3, 4, 5]
+console.log(numeros); // [1, 2, 3, 4, 5]     
 
 /*
 prototype => OBJETO -> deriva as suas caracteristicas em outro OBJETO
@@ -224,7 +224,7 @@ const minhaStringNova = "Olá, Mundo!";
 const minhaString2 = minhaStringNova + " Como você está?";
 console.log(minhaString2); // Olá, Mundo! Como você está?
 
-// Interpolação
+// Interpolação = `${variavel}`
 const minhaString3 = `${minhaStringNova} Como você está?`;
 console.log(minhaString3); // Olá, Mundo! Como você está?
 
