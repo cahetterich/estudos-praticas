@@ -226,7 +226,7 @@ console.log(minhaString2); // Olá, Mundo! Como você está?
 
 // Interpolação = `${variavel}`
 const minhaString3 = `${minhaStringNova} Como você está?`;
-console.log(minhaString3); // Olá, Mundo! Como você está?
+console.log(minhaString3); // Olá, Mundo! Como você está?*
 
 // Métodos comuns
 console.log(minhaString3.length); // 31
