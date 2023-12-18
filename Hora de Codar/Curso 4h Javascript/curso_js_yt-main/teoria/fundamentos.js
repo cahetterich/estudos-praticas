@@ -229,29 +229,30 @@ const minhaString3 = `${minhaStringNova} Como você está?`;
 console.log(minhaString3); // Olá, Mundo! Como você está?*
 
 // Métodos comuns
-console.log(minhaString3.length); // 31
-console.log(minhaString3.toUpperCase()); // OLÁ, MUNDO! COMO VOCÊ ESTÁ?
+console.log(minhaString3.length); // 27 - quantidade de caracteres
+console.log(minhaString3[5]); // 5 elemento da string, que é "M"
+console.log(minhaString3.toUpperCase()); // - transforma a frase em caixa alta "OLÁ, MUNDO! COMO VOCÊ ESTÁ?"
 
 // 2.15 Data e Hora
 
 // Data atual
-const agora = new Date();
+const agora = new Date(); // invocamos a data de hoje 
 console.log(agora);
 
-// Data específica
+// Data específica - NATAL   - os meses são de 0 a 11
 const natal = new Date(2023, 11, 25);
 console.log(natal);
 
 // 2.16 Objeto Math
 
 // Número PI
-console.log(Math.PI); // 3.141592653589793
+console.log(Math.PI); // 3.141592653589793 - o número pi
 
 // Arredondamento
-console.log(Math.round(3.6)); // 4
+console.log(Math.round(3.6)); // 4 - arredondou para cima
 
 // Raiz quadrada
-console.log(Math.sqrt(16)); // 4
+console.log(Math.sqrt(16)); // 4 - 
 
 // Potência
 console.log(Math.pow(2, 3)); // 8
