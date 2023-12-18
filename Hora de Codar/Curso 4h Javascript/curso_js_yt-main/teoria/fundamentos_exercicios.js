@@ -10,6 +10,12 @@ const valorString = "1234";
 const valorNumber = Number(valorString);
 console.log(typeof valorNumber); // "number"
 
+/* pode ser feito também como = 
+const valorString = "1234";
+const valorNumber = +valorString;
+console.log(typeof valorNumber); 
+*/
+
 //
 // D: Curso Desafios de JavaScript
 //
