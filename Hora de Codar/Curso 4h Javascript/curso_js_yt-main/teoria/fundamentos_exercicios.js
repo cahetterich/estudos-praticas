@@ -11,19 +11,20 @@ const valorNumber = Number(valorString);
 console.log(typeof valorNumber); // "number"
 
 /* pode ser feito também como = 
+
 const valorString = "1234";
 const valorNumber = +valorString;
-console.log(typeof valorNumber); 
+console.log(typeof valorNumber);   
 */
 
 //
 // D: Curso Desafios de JavaScript
-//
+// 
 
 // Exercício 3: Manipulação de Strings
 // Dado uma string "JavaScript é incrível", escreva um código que conte quantos caracteres a string tem e quantas palavras existem na frase.
 
-const minhaString = "JavaScript é incrível";
+const minhaString = "JavaScript é incrível"; 
 const numeroDeCaracteres = minhaString.length;
 const numeroDePalavras = minhaString.split(" ").length;
 
@@ -42,10 +43,27 @@ for (let i = 0; i < nomes.length; i++) {
 // Crie uma função que aceita uma string representando um horário no formato de 24 horas (por exemplo, "14:30"). A função deve retornar uma string que converta o horário para o formato de 12 horas (por exemplo, "2:30 PM"). Use o objeto Math para auxiliar nesta conversão. Certifique-se de que sua função lida corretamente com horários na meia-noite e no meio-dia.
 
 function converterHorario(horario24) {
+  // 14:20 => hora = 14, minuto = 20 => split(":") => [0] = hora
+  // const hora = horario24.split(":")[0];
+  // const minuto = horario24.split(":")[1];
+
   const [hora, minuto] = horario24.split(":");
-  let hora12 = hora % 12 || 12;
-  const periodo = hora < 12 ? "AM" : "PM";
-  return `${hora12}:${minuto} ${periodo}`;
+
+  //              15 % 12  =  3  ou  23 % 12 = 11
+  //         Falsy 12 % 12 = 0 => 12
+  const hora12 = hora % 12 || 12;
+
+  let periodo = "AM";
+  if (hora > 11) {
+    periodo = "PM";
+  }
+
+  console.log(`${hora12}:${minuto} ${periodo}`);
+
+  // const [hora, minuto] = horario24.split(":");
+  // let hora12 = hora % 12 || 12;
+  // const periodo = hora < 12 ? "AM" : "PM";
+  // return `${hora12}:${minuto} ${periodo}`;
 }
 
 console.log(converterHorario("14:30")); // "2:30 PM"
