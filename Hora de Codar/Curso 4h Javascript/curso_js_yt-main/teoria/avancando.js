@@ -80,10 +80,16 @@ cumprimentar("Maria", function () {
 
 //  settimeout - executa algo depois de um determinado tempo
 function mostrarMensagem() {
-  console.log("Esta é uma mensagem após 3 segundos");
+  console.log("Esta é uma mensagem - após 3 segundos");
 }
-
+           //Callback, segundos 3 segundos = 3000  - 1000ms = 1s
 setTimeout(mostrarMensagem, 3000); // Mostra a mensagem após 3 segundos
+
+//outro exemplo utilizando setTimeout
+
+setTimeout(function () {
+  console.log("Oi - após 4 segundos");  
+}, 4000);
 
 // 3.5 Promises
 const promessa = new Promise((resolve, reject) => {
