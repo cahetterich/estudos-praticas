@@ -70,7 +70,8 @@ function mostrarSaudacao() {
   console.log("Como você está?");
 }
 
-// função anonima
+// função anonima 
+// função executada dentro apenas dentro de outra função
 cumprimentar("Maria", mostrarSaudacao); // "Olá, Maria" "Como você está?"
 
 cumprimentar("Maria", function () {
@@ -92,7 +93,9 @@ setTimeout(function () {
 }, 4000);
 
 // 3.5 Promises
-const promessa = new Promise((resolve, reject) => {
+
+ // no promises podemos "resolve" ou "reject" (resolver ou rejeitar)
+const promessa = new Promise((resolve, reject) => { 
   const condicao = true;
   if (condicao) {
     resolve("A condição é verdadeira!");
