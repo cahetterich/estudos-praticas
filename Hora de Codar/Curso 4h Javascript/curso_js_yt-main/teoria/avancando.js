@@ -3,12 +3,15 @@
 // 3.1 Manipulação de arrays
 
 const frutas = ["Maçã", "Banana"];
-frutas.unshift("Laranja"); // Adiciona "Laranja" ao começo do array
+frutas.unshift("Laranja"); // unshift - Adiciona "Laranja" ao começo do array
 console.log(frutas);
 
 frutas.shift(); // Remove o primeiro elemento do array
 console.log(frutas);
 
+// map, filter, reduce -> arrow function (sintaxe)
+
+//find = encontra o primeiro número ou item especificado - critério selecionado
 const numeros = [1, 2, 3, 4, 5, 6];
 const numeroPar = numeros.find((num) => num % 2 === 0); // Encontra o primeiro número par
 console.log(numeroPar); // 2
