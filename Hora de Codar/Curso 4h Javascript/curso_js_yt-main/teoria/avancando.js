@@ -92,36 +92,51 @@ setTimeout(function () {
   console.log("Oi - após 4 segundos");  
 }, 4000);
 
-// 3.5 Promises
+// 3.5 Promises - 
 
- // no promises podemos "resolve" ou "reject" (resolver ou rejeitar)
+// promete que o código vai executar após alguma coisa
+
+ // no promises podemos "resolve" ou "reject" (resolver ou rejeitar) - é um padrão da função anonima ()
 const promessa = new Promise((resolve, reject) => { 
+
   const condicao = true;
   if (condicao) {
     resolve("A condição é verdadeira!");
   } else {
     reject("A condição é falsa!");
   }
-});
+});   // é a função
 
-promessa
+promessa  // then executa a promessa - ou seja, é o resolve
   .then((mensagem) => console.log(mensagem)) // "A condição é verdadeira!"
+         // catch executa o reject, ou neste caso o erro
   .catch((erro) => console.log(erro));
+
+/*
+utilizamos promise tem muitas bibliotecas feitas - Bibliotecas feitas que são "promise based"
+
+eram usadas para requisição de servidores, mas hoje usamos Async e Await
+*/
+
+// utilizando all em promise
+// faz com que seja executada várias promise de uma única vez
 
 const promessa1 = Promise.resolve(3);
 const promessa2 = new Promise((resolve, reject) =>
-  setTimeout(resolve, 100, "foo")
+  setTimeout(resolve, 2500, "teste promise")
 );
-
+        //executada                 // then - recebe os valores   
 Promise.all([promessa1, promessa2]).then((valores) => console.log(valores)); // [3, "foo"]
 
+
 // 3.6 Async/Await
+// assincrona - acontece com o andar do código, não trava o programa
 async function obterValor() {
   const promessa = new Promise((resolve, reject) => {
     setTimeout(() => resolve("Valor obtido!"), 2000);
   });
 
-  const valor = await promessa;
+  const valor = await promessa; // await - espera o valor chegar para executá-lo
   console.log(valor); // "Valor obtido!"
 }
 
