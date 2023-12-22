@@ -142,15 +142,30 @@ async function obterValor() {
 
 obterValor();
 
+// Obter valor com erro - para todo o programa
+
 /*
+async function obterValorComErro() {  
+    const promessa = new Promise((resolve, reject) => {
+      setTimeout(() => reject("Valor com erro"), 2000);
+    });
+
+    const valor = await promessa;
+    console.log(valor);
+    }
+obterValorComErro();
+*/
+
+// Obter valor com erro - segue o programa
 
 async function obterValorComErro() {
-  try {
+  try {  // para que o código funcione mesmo com o erro, precisamos usar try e catch
     const promessa = new Promise((resolve, reject) => {
       setTimeout(() => reject("Erro ao obter valor!"), 2000);
     });
 
     const valor = await promessa;
+
     console.log(valor);
   } catch (erro) {
     console.error(erro); // "Erro ao obter valor!"
@@ -159,13 +174,25 @@ async function obterValorComErro() {
 
 obterValorComErro();
 
-*/
 
 // 3.7 JSON
-const objeto = { nome: "João", idade: 30 };
-const jsonString = JSON.stringify(objeto);
-console.log(jsonString); // "{"nome":"João","idade":30}"
 
+/*
+é quase como um objeto, é puro texto
+
+JSON = JavaScript Object Notation
+{nome: 'teste'} => {"nome": "teste"} - padroniza a comunicação 
+front-end e back-end em uma linguagem só 
+*/
+
+const objeto = { nome: "João", idade: 30 }; //array de objetos
+
+const jsonString = JSON.stringify(objeto); // converte nosso objeto para JSON
+
+console.log(jsonString); // "{"nome":"João","idade":30}"
+console.log(typeof jsonString); // mostra o tipo - string
+
+// forma correta de fazer a conversão 
 const jsonString2 = '{"nome":"João","idade":30}';
 const objeto2 = JSON.parse(jsonString);
-console.log(objeto); // { nome: "João", idade: 30 }
+console.log(objeto2); // { nome: "João", idade: 30 }
