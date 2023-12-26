@@ -1,37 +1,48 @@
 // 4 - DOM  - Document Object Model
 
+/*
+Seleção de elementos
+*/
+
 // 4.1 Selecionando elementos no DOM
 
-//metodo antigo de seleção - Get Elements By Id
+//metodo antigo de seleção - Get Elements By Id = Antiga forma
 const elementoPorId1 = document.getElementById("meuId");
-
 console.log(elementoPorId1);
-
 
 // Selecionando um elemento pelo id - Query Selector
 const elementoPorId = document.querySelector("#meuId");
-
 console.log(elementoPorId);
-
-// Selecionando uma classe - Get Elements By Class Name = 
+ 
+// Selecionando uma classe - Get Elements By Class Name = Antiga forma
 const elementosPorClasse1 = document.getElementsByClassName("minhaClasse"); // não é muito utilizado, pois puxa um metodo diferente
-
 console.log(elementosPorClasse1);
 
+// hoje utilizamos  Query Selector puxando sua classe
+const elementPorClasse2 = document.querySelector(".minhaClasse");
+console.log(elementPorClasse2);
+
+//ou 
 
 // Selecionando todos os elementos com a classe 'minhaClasse' - Query Selector All
 const elementosPorClasse = document.querySelectorAll(".minhaClasse"); 
-
 console.log(elementosPorClasse);
+
+/*
+Manipulação de elementos
+*/
 
 // 4.2 Manipulando conteúdo de texto - Query Selector 
 const elemento = document.querySelector("#meuId");
-
 // Obtendo o conteúdo de texto
-console.log(elemento.textContent);
+console.log(elemento.textContent); // textContent = consulta o texto/conteudo dentro do ID
 
 // Alterando o conteúdo de texto
-elemento.textContent = "Novo Conteúdo";
+elemento.textContent = "Novo Conteúdo"; //aparece no HTML
+
+// setTimeout(() => {
+//   elemento.textContent = "Mudei o texto";  // altera o texto da div id="meuId" após 1 segundo
+// }, 1000);
 
 // 4.3 Trabalhando com atributos
 const link = document.querySelector("a");
