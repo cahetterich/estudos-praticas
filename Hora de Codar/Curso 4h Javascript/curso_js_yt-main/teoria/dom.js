@@ -1,18 +1,30 @@
-// 4 - DOM
+// 4 - DOM  - Document Object Model
 
 // 4.1 Selecionando elementos no DOM
 
-// Selecionando um elemento pelo id
+//metodo antigo de seleção - Get Elements By Id
+const elementoPorId1 = document.getElementById("meuId");
+
+console.log(elementoPorId1);
+
+
+// Selecionando um elemento pelo id - Query Selector
 const elementoPorId = document.querySelector("#meuId");
 
 console.log(elementoPorId);
 
-// Selecionando todos os elementos com a classe 'minhaClasse'
-const elementosPorClasse = document.querySelectorAll(".minhaClasse");
+// Selecionando uma classe - Get Elements By Class Name = 
+const elementosPorClasse1 = document.getElementsByClassName("minhaClasse"); // não é muito utilizado, pois puxa um metodo diferente
+
+console.log(elementosPorClasse1);
+
+
+// Selecionando todos os elementos com a classe 'minhaClasse' - Query Selector All
+const elementosPorClasse = document.querySelectorAll(".minhaClasse"); 
 
 console.log(elementosPorClasse);
 
-// 4.2 Manipulando conteúdo de texto
+// 4.2 Manipulando conteúdo de texto - Query Selector 
 const elemento = document.querySelector("#meuId");
 
 // Obtendo o conteúdo de texto

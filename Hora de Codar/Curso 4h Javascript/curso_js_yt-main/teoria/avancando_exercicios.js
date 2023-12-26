@@ -16,7 +16,7 @@ console.log(listaDeCompras); // ['Ovos', 'Pão', 'Manteiga', 'Queijo']
 // Use a função find() para encontrar o primeiro número que é divisível por 7
 // e maior que 10.
 
-const numeros = [3, 7, 14, 21, 29, 36, 42];
+const numeros = [3, 7, 11, 14, 21, 29, 36, 42];
 const resultado = numeros.find((num) => num > 10 && num % 7 === 0);
 console.log(resultado); // 14
 
