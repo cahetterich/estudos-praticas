@@ -1,2 +1,2 @@
 # Estudos pessoais de códigos
-Tutoriais e estudos feitos para práticar. 
+Tutoriais e estudos feitos para praticar. 
