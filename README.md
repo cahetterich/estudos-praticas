@@ -1,2 +1,2 @@
-# Estudos
-Estudos pessoais de códigos
+# Estudos pessoais de códigos
+Tutoriais e estudos feitos para práticar. 
